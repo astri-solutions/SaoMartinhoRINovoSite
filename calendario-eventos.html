@@ -36,6 +36,9 @@
 
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.min.js"></script>
   </head>
 
   <body>
@@ -490,6 +493,63 @@
       </div>
     </div>
 
+    <div class="container container-full">
+      <div class="content-header-internal p-80">
+        <div class="ri-eventos">
+        
+          <div class="ri-topo">
+            <div class="ri-ano">
+              <span class="ri-ano__rotulo" id="rotuloAno">Ano</span>
+              <div class="ri-select">
+                <select id="selectAno" aria-labelledby="rotuloAno"></select>
+                <svg class="ri-select__seta" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+        
+            <ul class="ri-legenda" id="legenda"></ul>
+          </div>
+        
+          <div class="ri-colunas">
+        
+            <section class="cartao" aria-label="Calendário de eventos">
+              <div class="cal-topo">
+                <button class="cal-nav" id="btnAnterior" type="button" aria-label="Mês anterior">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <h2 id="tituloCalendario" aria-live="polite"></h2>
+                <button class="cal-nav" id="btnProximo" type="button" aria-label="Próximo mês">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="cal-corpo"><div id="calendario"></div></div>
+            </section>
+        
+            <aside class="cartao proximos" aria-label="Próximos eventos">
+              <h3>Próximos Eventos</h3>
+              <ul id="listaProximos"></ul>
+            </aside>
+        
+          </div>
+        
+          <section class="realizados" aria-labelledby="tituloRealizados">
+            <div class="realizados__topo">
+              <h2 id="tituloRealizados">Eventos Realizados</h2>
+              <div class="ri-ano">
+                <span class="ri-ano__rotulo" id="rotuloAnoRealizados">Ano</span>
+                <div class="ri-select">
+                  <select id="selectAnoRealizados" aria-labelledby="rotuloAnoRealizados"></select>
+                  <svg class="ri-select__seta" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+              </div>
+            </div>
+        
+            <hr class="realizados__regua">
+        
+            <ul class="realizados__lista" id="listaRealizados"></ul>
+          </section>
+        </div>
+      </div>
+    </div>
 
 
     <footer>
@@ -614,5 +674,6 @@
     <script src="js/main.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/timeline.js"></script>
+    <script src="js/calendar.js"></script>
   </body>
 </html>
