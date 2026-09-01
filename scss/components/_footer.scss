@@ -91,6 +91,13 @@ footer {
         line-height: 124%;
       }
 
+      .logo {
+        img {
+          width: auto;
+          height: 20px;
+        }
+      }
+
       .social-footer {
         display: flex;
         align-items: center;

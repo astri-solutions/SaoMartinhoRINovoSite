@@ -112,9 +112,9 @@
     }
     
     .ethics-card {
-      background: #f2f2f2;
-      border-radius: 12px;
-      padding: 1.5rem 1.25rem;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 32px;
       text-align: center;
     
       @media (max-width: 991px) {
@@ -122,16 +122,15 @@
       }
     
       &__title {
-        font-size: 0.875rem;
+        font-size: 24px;
         font-weight: 700;
         letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: var(--color-primary);
+        color: var(--color-text-primary);
         margin-bottom: 1rem;
       }
     
       p {
-        font-size: 1rem;
+        font-size: 18px;
         color: #262626;
         line-height: 1.4;
         margin: 0;
@@ -144,9 +143,10 @@
         }
     
         .links-cinzas {
-          color: var(--color-text-secondary);
-          text-decoration: underline;
+          color: var(--color-text-primary);
+          text-decoration: none;
           text-underline-offset: 2px;
+          font-size: 18px;
     
           &:hover { opacity: 0.8; }
         }
@@ -733,7 +733,7 @@
 
             color: #6e6e6e;
             font-family: var(--main-font);
-            font-size: 18px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: 140%;
@@ -1067,6 +1067,10 @@
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  h2 {
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -7415,8 +7419,16 @@ a.send {
   padding-bottom: 80px;
 }
 
+.pb-40 {
+  padding-bottom: 40px;
+}
+
 .pt-80 {
   padding-top: 80px;
+}
+
+.pt-40 {
+  padding-top: 40px;
 }
 
 .box-sus {
@@ -8854,14 +8866,14 @@ a.send {
         justify-content: space-between;
         width: 100%;
         min-height: 56px;
-        padding: 12px 16px;
+        padding: 16px;
         border: 1px solid #ebebeb;
-        border-radius: 8px;
+        border-radius: 12px;
         background: #fff;
         color: #1a1a1a;
         font-family: var(--main-font);
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 140%;
         text-decoration: none;
         transition: border-color 0.2s ease, color 0.2s ease;
@@ -8876,6 +8888,10 @@ a.send {
           height: 24px;
           flex: 0 0 24px;
           margin-left: 16px;
+        }
+
+        a {
+          font-weight: 300;
         }
 
       }
@@ -8954,7 +8970,7 @@ a.send {
           color: var(--color-primary);
           font-family: var(--main-font);
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 400;
           line-height: 140%;
         }
 

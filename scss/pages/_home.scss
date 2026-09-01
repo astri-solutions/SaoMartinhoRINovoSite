@@ -556,7 +556,7 @@
           flex-shrink: 0;
         }
 
-        &:hover { color: var(--color-primary); }
+        &:hover { color: var(--color-text-secondary); }
       }
   }
   .content-central-resultados-home {
@@ -864,9 +864,8 @@
 
   &__title {
     font-size: 1.125rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: .025em;
-    text-transform: uppercase;
     color: var(--color-primary);
     margin: 0;
   }
@@ -935,4 +934,11 @@
     background-color: var(--color-text-secondary);
     color: #fff;
   }
+}
+
+.btn.btn--outline {
+  font-weight: 700;
+  font-size: 14px;
+  align-self: end;
+  width: 110px;
 }

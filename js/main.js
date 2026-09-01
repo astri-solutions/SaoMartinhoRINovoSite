@@ -848,10 +848,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const isHomePage = path === "/" || path.endsWith("/index.html");
 
-  if (!isHomePage) {
-    header.classList.add("at-top");
-    return;
-  }
+  // if (!isHomePage) {
+  //   header.classList.add("at-top");
+  //   return;
+  // }
 
   let lastScrollTop = 0;
 
