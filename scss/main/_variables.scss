@@ -1,0 +1,38 @@
+:root {
+  --color-primary: #002152;
+  --color-text-primary: #2e5179;
+  --color-text-secondary: #2ea24f;
+  --main-font: "Univers";
+}
+
+// === PALETA PRINCIPAL ===
+$color-primary: #002152;
+$color-secondary: #3b3b3b;
+$color-hover: #007f16;
+
+// === ESCALA DE CINZA ===
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// === FEEDBACK ===
+$color-success: #28a745;
+$color-error: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+// === TEXTO ===
+$text-color: $gray-900;
+$text-muted: $gray-600;
+$text-light: $gray-100;
+
+// === FUNDO ===
+$background-default: #ffffff;
+$background-muted: $gray-100;
+$background-dark: $gray-900;

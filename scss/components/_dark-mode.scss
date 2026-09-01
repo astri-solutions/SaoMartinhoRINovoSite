@@ -1,0 +1,1515 @@
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+
+  .banner-home {
+    background: #1d1d1d;
+  }
+
+  .content-text-programa .cc-text-programa h4 {
+    color: #fff;
+  }
+
+  header.show-header {
+    background: #2b2b2b;
+  }
+
+  header.hide-header {
+    background: #2b2b2b;
+  }
+
+  .banner-home .banner-swiper .swiper-slide .text-slide h2:after {
+    filter: grayscale(1) brightness(2.5);
+  }
+
+  header .content-header .navigation .dropdown.active p {
+    border-bottom: 1px solid white;
+    background: unset;
+    color: #e0e0e0;
+    transition: all 0.4s ease;
+    border-radius: 0;
+  }
+
+  .flex-contato .texts h3 {
+    color: #fff;
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  .plataforma-manuais .cc-manuais h3 {
+    color: #fff;
+  }
+
+  .plataforma-manuais .cc-manuais p {
+    color: #fff;
+  }
+
+  .plataforma-manuais .cc-manuais ul li {
+    color: #fff;
+  }
+
+  .box-links-manuais {
+    background-color: #252725;
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  header .content-header .navigation .dropdown-item:hover,
+  header .content-header .navigation .dropdown-item:focus,
+  header .content-header .navigation .dropdown-item:active {
+    color: #6e6e6e;
+  }
+
+  header .content-header .navigation .dropdown-item:after {
+    background-color: #6e6e6e;
+  }
+
+  .banner-home .banner-swiper .main-pagination .trade-slide-link:hover {
+    background-color: #6e6e6e;
+    border-color: #6e6e6e;
+  }
+
+  #searchBox {
+    background-color: #2b2b2b;
+  }
+
+  #searchBox .input-group .close-search-box img {
+    filter: invert(1);
+  }
+
+  #searchBox .input-group {
+    border-bottom: 1px solid white;
+  }
+
+  .acessibility-bar
+    .content-acessibility
+    .accessibility-tools
+    .language-tools
+    .language-dropdown
+    .language-menu
+    li
+    a.active {
+    color: #000;
+  }
+
+  .link-animated:before {
+    background-color: #000;
+  }
+
+  .link-animated:after {
+    filter: grayscale(1) brightness(16.5) invert(1);
+  }
+
+  .last-link-events {
+    color: #fff;
+  }
+
+  .timeline-qs .title-timeline h3 {
+    color: #fff;
+  }
+
+  .timeline-qs .timeline-content .timeline-text h3 {
+    color: #000;
+  }
+
+  .timeline-qs .timeline-nav .timeline-years .track-progress {
+    background: #000;
+  }
+
+  .timeline-qs
+    .timeline-nav
+    .timeline-years
+    .track-points
+    .point-wrapper.active
+    .point {
+    background: #000;
+  }
+
+  .timeline-qs
+    .timeline-nav
+    .timeline-years
+    .track-points
+    .point-wrapper.active
+    .year {
+    color: #000;
+  }
+
+  .timeline-qs
+    .timeline-nav
+    .timeline-years
+    .track-points
+    .point-wrapper.passed
+    .point {
+    background: #000;
+  }
+
+  .timeline-qs
+    .timeline-nav
+    .timeline-years
+    .track-points
+    .point-wrapper.passed
+    .year {
+    color: #000;
+  }
+
+  .timeline-qs .timeline-nav .swiper-button-prev,
+  .timeline-qs .timeline-nav .swiper-button-next {
+    border-color: #fff;
+    filter: grayscale(1) brightness(0);
+  }
+
+  .timeline-qs .timeline-nav .swiper-button-prev:hover,
+  .timeline-qs .timeline-nav .swiper-button-next:hover {
+    background: #fff;
+  }
+
+  .timeline-qs
+    .timeline-nav
+    .timeline-years
+    .track-points
+    .point-wrapper:hover
+    .year {
+    color: #000;
+  }
+
+  h2 {
+    color: #fff;
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  table {
+    color: #fff;
+    background-color: #1a1a1a !important;
+  }
+
+  table thead th {
+    background-color: #1a1a1a !important;
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+
+  table tbody tr td {
+    background-color: #1a1a1a !important;
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+
+  table tbody tr {
+    background-color: #1a1a1a !important;
+  }
+
+  table tbody tr:nth-child(even) {
+    background-color: #1a1a1a !important;
+  }
+
+  table tbody tr:hover {
+    background-color: #1a1a1a !important;
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #1a1a1a !important;
+  }
+
+  .table-dark {
+    background-color: #1a1a1a !important;
+  }
+
+  .filter .filter-controls .filter-button:hover {
+    background: #2b2b2b;
+    border-color: #2b2b2b;
+    box-shadow: unset !important;
+  }
+
+  .filter .filter-controls .filter-button.active {
+    background: #2b2b2b;
+    border-color: #2b2b2b;
+    box-shadow: unset !important;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:hover {
+    color: #000;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:hover
+    span {
+    color: #000;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:hover::after {
+    color: #000;
+  }
+
+  .accordions-main .accordion .accordion-item:hover {
+    border-color: #2b2b2b;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item:has(.accordion-button:not(.collapsed)) {
+    border-color: #2b2b2b;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-collapse
+    .accordion-body
+    .accordion-content-list
+    .accordion-item-row:hover {
+    border-color: #2b2b2b;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-collapse
+    .accordion-body
+    .accordion-content-list
+    .accordion-item-row:hover
+    .item-date {
+    color: #000;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-collapse
+    .accordion-body
+    .accordion-content-list
+    .accordion-item-row:hover
+    .item-title {
+    color: #000;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-collapse
+    .accordion-body
+    .accordion-content-list
+    .accordion-item-row:hover
+    .item-download
+    img {
+    filter: grayscale(1) brightness(0);
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:not(.collapsed)
+    .accordion-title {
+    color: #000;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:not(.collapsed)::after {
+    color: #000;
+  }
+
+  .container-glossario
+    .glossario-content
+    .glossario-section
+    .glossario-terms
+    .glossario-term
+    .term-definition {
+    color: #fff;
+  }
+
+  header .content-header .navigation .dropdown-toggle.is-active p {
+    background-color: #1a1a1a;
+  }
+
+  header .content-header .submenu .submenu-item a:hover {
+    color: #000;
+  }
+
+  header .content-header .navigation .submenu-parent:hover .dropdown-item {
+    color: #000;
+  }
+
+  header .content-header .logo img {
+    filter: grayscale(1) brightness(22.5);
+  }
+
+  header.show-header .content-header .navigation .dropdown-toggle p {
+    color: #fff;
+  }
+
+  header.show-header .search-bar img {
+    filter: unset;
+  }
+
+  .banner-home .progress {
+    background: #fff;
+  }
+
+  .somos-sm .content-somos-sm .text-somos-sm h2 {
+    color: #fff;
+  }
+
+  .somos-sm .content-somos-sm .text-somos-sm h3 {
+    color: #fff;
+  }
+
+  .somos-sm .content-somos-sm .text-somos-sm p {
+    color: #fff;
+  }
+
+  .somos-sm .content-somos-sm .text-somos-sm a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .portfolio-sm {
+    background-color: #1a1a1a;
+  }
+
+  .portfolio-sm
+    .content-portfolio-sm
+    .mySwiper-portfolio-home
+    .swiper-wrapper
+    .swiper-slide:hover::after {
+    background-color: #1a1a1a;
+  }
+
+  .portfolio-sm
+    .content-portfolio-sm
+    .mySwiper-portfolio-home
+    .swiper-wrapper
+    .swiper-slide:hover
+    .icon-slide {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+  }
+
+  .portfolio-sm .content-portfolio-sm .mySwiper-portfolio-home:after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 43, 87, 0) 0%,
+      rgba(0, 0, 0, 0.219) 100%
+    );
+  }
+
+  .energia-sm .content-energia-sm .text-energia-sm h2 {
+    color: #fff;
+  }
+
+  .energia-sm .content-energia-sm .text-energia-sm h3 {
+    color: #fff;
+  }
+
+  .energia-sm .content-energia-sm .text-energia-sm p {
+    color: #fff;
+  }
+
+  .energia-sm .content-energia-sm .text-energia-sm a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .inovacao-sm {
+    background: linear-gradient(rgb(0 0 0 / 90%), rgb(0 0 0 / 90%)),
+      url(../../images/bg-inovacao.jpg) center / cover no-repeat;
+  }
+
+  .inovacao-sm .content-inovacao-sm .text-inovacao-sm a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .jeitinho-sm .ser-sm:after {
+    background: linear-gradient(
+      90deg,
+      #000000 13.32%,
+      rgba(0, 43, 87, 0.39) 100.49%,
+      rgba(0, 43, 87, 0) 100%
+    );
+  }
+  .jeitinho-sm .ser-sm::before {
+    filter: grayscale(1);
+  }
+
+  .jeitinho-sm .box-sm .box {
+    background: linear-gradient(
+        270deg,
+        rgb(0 0 0 / 10%) 21.89%,
+        rgb(0 0 0 / 80%) 70.91%
+      ),
+      url(../../images/box-2.jpg) #d3d3d3 50% / cover no-repeat;
+  }
+
+  .blue-space {
+    background-color: #1a1a1a;
+  }
+
+  footer .first-content-footer {
+    background-color: #1a1a1a;
+  }
+
+  footer .powered-footer {
+    background-color: #1a1a1a;
+  }
+
+  header.menu-internal.at-top {
+    background: #2b2b2b !important;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  header.menu-internal .content-header .navigation .dropdown-toggle p {
+    color: #fff;
+  }
+
+  header.menu-internal .search-bar img {
+    filter: none;
+  }
+
+  .header-internal .title-page h1 {
+    color: #fff;
+  }
+
+  .header-internal .title-page .breadcrumb a {
+    color: #fff;
+  }
+
+  .header-internal::before {
+    filter: grayscale(1);
+  }
+
+  .navigation-att a {
+    color: #000;
+  }
+
+  .content-quem-somos .content-text p {
+    color: #fff;
+  }
+
+  .content-quem-somos .content-text span {
+    color: #fff;
+  }
+
+  .content-quem-somos .proposito-quem-somos {
+    background-color: #1a1a1a;
+  }
+
+  .content-quem-somos .box-proposito:after {
+    background: linear-gradient(
+      90deg,
+      #000000 13.32%,
+      rgba(0, 43, 87, 0.39) 100.49%,
+      rgba(0, 43, 87, 0) 100%
+    );
+  }
+
+  .content-quem-somos .box-proposito::before {
+    filter: grayscale(1);
+  }
+
+  .pilares-quem-somos h1 {
+    color: #fff;
+  }
+
+  .jeito-quem-somos:before {
+    background: linear-gradient(
+      90deg,
+      rgb(0 0 0 / 80%) 0%,
+      rgba(42, 42, 42, 0.32) 100%
+    );
+  }
+
+  .timeline-quem-somos .title-timeline h2 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .timeline-quem-somos .title-timeline .text-timeline p {
+    color: #fff;
+  }
+
+  .timeline-quem-somos .title-timeline .text-timeline span {
+    color: #fff;
+  }
+
+  .pagination-qs .swiper-button-prev,
+  .pagination-qs .swiper-button-next {
+    filter: grayscale(1) brightness(10);
+  }
+
+  .content-n-n .swiper-slide .timeline-content .unidades-slide .unidade h3 {
+    color: #fff;
+  }
+
+  .content-n-n .swiper-slide .timeline-content .unidades-slide .unidade p {
+    color: #fff;
+  }
+
+  .content-n-n .swiper-slide .timeline-content .unidades-slide .unidade {
+    border-color: #e0e0e0;
+  }
+
+  .content-governanca .content-text h2 {
+    color: #fff;
+  }
+
+  .content-governanca .content-text h3 {
+    color: #fff;
+  }
+
+  .content-governanca .content-text p {
+    color: #fff;
+  }
+
+  .content-governanca .gov-image h3 {
+    color: #fff;
+  }
+
+  .confira-box {
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 43, 87, 0) 100%),
+      url(../../images/content-gov.png) #d3d3d3 50% / cover no-repeat;
+
+    a {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .content-governanca .see-gov {
+    background-color: #1a1a1a;
+  }
+
+  .content-governanca .riscos-gov h2 {
+    color: #fff;
+  }
+
+  .content-governanca .riscos-gov p {
+    color: #fff;
+  }
+
+  .content-governanca .conformidade-gov {
+    background-color: #1a1a1a;
+  }
+
+  .content-governanca .conformidade-gov h2 {
+    color: #fff;
+  }
+
+  .content-governanca .conformidade-gov p {
+    color: #fff;
+  }
+
+  .content-governanca .conformidade-gov .box-conformidade {
+    background-color: #2b2b2b;
+  }
+
+  .content-governanca .conformidade-gov .box-conformidade .infos-box a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .content-governanca
+    .conformidade-gov
+    .links-conformidade
+    .inputs-conformidade
+    a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .content-governanca
+    .conformidade-gov
+    .links-conformidade
+    .inputs-conformidade
+    a::after {
+    filter: invert(1);
+  }
+
+  .premios-sm .title-filter-premios h2 {
+    color: #fff;
+    b {
+      color: #fff;
+    }
+  }
+
+  .certificacoes-sm {
+    background: #1a1a1a;
+  }
+
+  .certificacoes-sm .title-cert h2 {
+    color: #fff;
+  }
+
+  .certificacoes-sm .title-cert p {
+    color: #fff;
+  }
+
+  .cards-cert-wrapper .cards-slide .link-card a {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+  .cards-cert-wrapper .show-p.is-open {
+    color: #000;
+  }
+
+  .cards-cert-wrapper .cards-slide .infos-card.active .title-materia {
+    color: #000 !important;
+  }
+
+  .ratings-premios .title-ratings-premios h2 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .ratings-premios .title-ratings-premios .flex-text p {
+    color: #fff;
+  }
+
+  .inovacao-n-j .first-box h4 {
+    color: #000;
+  }
+
+  .inovacao-n-j .cc-box-numbers .box {
+    background-color: #2b2b2b;
+  }
+
+  .proposito-n-j {
+    background-color: #1a1a1a;
+  }
+
+  .cc-floresce .content-text h2 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .cc-floresce .content-text p {
+    color: #fff;
+  }
+
+  .floresce-n-j .parceiros-f .title-parceiros-f h2 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .floresce-n-j .parceiros-f .box-parceiros-f .box {
+    background-color: #2b2b2b;
+  }
+
+  .centro-martinho {
+    background-color: #1a1a1a;
+  }
+
+  .content-pio .title-timeline-p h2 {
+    color: #fff;
+  }
+
+  .content-pio .title-timeline-p p {
+    color: #fff;
+  }
+
+  .content-pio .last-link-timeline-p {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .content-doc .content-download h2 {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  .content-dados .text-dados p {
+    color: #fff;
+  }
+
+  .content-dados .principios-lgpd h3 {
+    color: #000;
+  }
+
+  .content-unidades .cc-unidades h2 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .content-unidades
+    .cc-unidades
+    .cards-unidades
+    .cards
+    .content-cards
+    .texts-cards
+    span {
+    color: #000;
+  }
+
+  .escritorios-sm {
+    background: linear-gradient(rgb(31 31 31), rgb(31 31 31)),
+      url(../../images/escritorios.jpg) center / cover no-repeat;
+  }
+
+  .contato-escritorio .cc-contato .texts-contato h2 {
+    color: #fff;
+    b {
+      color: #fff;
+    }
+  }
+
+  .contato-escritorio .cc-contato .texts-contato p {
+    color: #fff;
+  }
+
+  a.send {
+    background-color: #2b2b2b;
+  }
+
+  .content-unidade .cc-unidade .content-text h2 {
+    color: #fff;
+    b {
+      color: #fff;
+    }
+  }
+
+  .content-unidade .cc-unidade .content-text p {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .content-unidade
+    .cc-unidade
+    .content-box
+    .swiper-unidades
+    .swiper-wrapper
+    .swiper-slide
+    .infos-un
+    span {
+    color: #fff;
+  }
+
+  .content-unidade
+    .cc-unidade
+    .content-box
+    .swiper-unidades
+    .swiper-wrapper
+    .swiper-slide:hover {
+    background-color: #6e6e6e;
+  }
+
+  .content-unidade
+    .cc-unidade
+    .content-box
+    .swiper-unidades
+    .swiper-wrapper
+    .swiper-slide
+    img {
+    filter: grayscale(1) brightness(19.5);
+  }
+
+  .content-unidade
+    .cc-unidade
+    .content-box
+    .swiper-unidades
+    .swiper-wrapper
+    .swiper-slide
+    .infos-un
+    p {
+    color: #fff;
+  }
+
+  .content-unidade .cc-unidade .content-text span {
+    color: #fff;
+  }
+
+  .content-unidade .cc-unidade .content-text h3 {
+    color: #fff;
+  }
+
+  .content-unidade .cc-unidade .content-text a {
+    background: #fff;
+    color: #000;
+  }
+
+  .image-unidades .swiper-button-prev-2,
+  .image-unidades .swiper-button-next-2 {
+    filter: grayscale(1) brightness(10);
+  }
+
+  .loc-unidades {
+    background: url(../../images/unidades-loc.jpg) center / cover no-repeat,
+      #161718;
+  }
+
+  .content-intern .cc-acu p {
+    color: #fff;
+  }
+
+  .content-intern .processos-acu h3 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .atencao-acu {
+    background-color: #2b2b2b;
+  }
+
+  .atencao-acu h4 {
+    color: #fff;
+  }
+
+  .atencao-acu p b {
+    color: #fff;
+  }
+
+  .atencao-acu a {
+    background-color: #fff;
+    color: #000000;
+  }
+
+  .cc-et .cards-intern .cards::after {
+    background: linear-gradient(180deg, rgba(46, 162, 79, 0) 0%, #252725 100%);
+  }
+
+  .cc-et .cards-intern .cards::before {
+    background: linear-gradient(180deg, rgba(46, 81, 121, 0) 0%, #3f4042 100%);
+  }
+
+  .cc-et a {
+    background-color: #fff;
+    color: #000000;
+  }
+
+  .content-f-etanol {
+    background-color: #1a1a1a;
+  }
+
+  .content-f-etanol .processos-acu h3 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .content-smart .cc-smart .texts-smart h2 {
+    color: #fff;
+  }
+
+  .content-smart .cc-smart .texts-smart p {
+    color: #fff;
+    b {
+      color: #fff;
+    }
+  }
+
+  .c-a-smart {
+    background: linear-gradient(
+        180deg,
+        #1e1f1f 11.06%,
+        rgb(29 30 30 / 12%) 100%
+      ),
+      url(../../images/bg-smart.jpg) #1e1f1f 50% / cover no-repeat;
+  }
+
+  .smart-prod-intern .title-smart-prod h2 {
+    color: #fff;
+  }
+
+  .smart-prod-intern .boxs-smart-prod .box p {
+    color: #fff;
+  }
+
+  .beneficios-smart-prod .box-beneficios:before {
+    filter: grayscale(1);
+  }
+
+  .beneficios-2-smart-prod .content-beneficios-2 .box-beneficios:before {
+    filter: grayscale(1);
+  }
+
+  .beneficios-smart-prod
+    .box-beneficios
+    .lists-beneficios
+    .cc-list
+    .box-list
+    .item-list
+    img {
+    filter: grayscale(1) invert(1);
+  }
+
+  .contato-smart-prod {
+    background-color: #1a1a1a;
+  }
+
+  .certificados-smart-prod .links-cert .links-cert a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .beneficios-smart-prod-3 .box-beneficios:before {
+    filter: grayscale(1);
+  }
+
+  .beneficios-smart-prod-3 .box-beneficios h3 {
+    color: #000;
+  }
+
+  .beneficios-smart-prod-3
+    .box-beneficios
+    .lists-beneficios
+    .cc-list
+    .box-list
+    .item-list {
+    img {
+      filter: grayscale(1) invert(1);
+    }
+  }
+
+  .beneficios-3-smart-prod .content-beneficios-2 .box-beneficios:before {
+    filter: grayscale(1);
+  }
+
+  .cards-lot .cc-cards-lot .cards .infos-card .title p {
+    color: #000;
+  }
+
+  .cards-lot .cc-cards-lot .cards:hover {
+    background-color: #2b2b2b;
+
+    .infos-card {
+      .title {
+        p {
+          color: #fff;
+        }
+
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .cards-lot .cc-cards-lot .cards:hover .infos-card .infos p {
+    border-bottom: 1px solid #fff;
+  }
+
+  .box-sus {
+    background-color: #252725;
+
+    a {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .gov-sus {
+    background-color: #1a1a1a;
+  }
+
+  .gov-sus .content-gov-sus h3 {
+    color: #fff;
+  }
+
+  .gov-sus .content-gov-sus p {
+    color: #fff;
+  }
+
+  .gov-sus a.link-gov {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .content-materialidade .title-mat h3 {
+    color: #fff;
+  }
+
+  .content-materialidade .title-mat p {
+    color: #fff;
+  }
+
+  .content-materialidade .image-mat h3 {
+    color: #fff;
+  }
+
+  .pilares-sus {
+    background: #1a1a1a;
+  }
+
+  .pilares-sus .title-pilares h2 {
+    color: #fff;
+  }
+
+  .pilares-sus .title-pilares p {
+    color: #fff;
+  }
+
+  .desempenho-ambiental .flex-items .text h2 {
+    color: #fff;
+  }
+
+  .desempenho-ambiental .flex-items .text p {
+    color: #fff;
+  }
+
+  .desempenho-bio {
+    background: #1a1a1a;
+  }
+
+  .residuos-amb {
+    background: #1a1a1a;
+  }
+
+  .residuos-amb .title-residuos h2 {
+    color: #fff;
+  }
+
+  .residuos-amb .title-residuos p {
+    color: #fff;
+  }
+
+  .residuos-amb .carrosel-residuos .swiper-slide .content-slide h6 {
+    color: #000;
+  }
+
+  .residuos-amb .carrosel-residuos .swiper-pagination .swiper-p {
+    background-color: #3f4042;
+  }
+
+  .content-projetos-amb .cc-projetos-amb .title-projetos-amb p {
+    color: #fff;
+  }
+
+  .content-projetos-amb .cc-projetos-amb .cards-projetos-amb h3 {
+    color: #fff;
+  }
+
+  .content-projetos-amb .cc-projetos-amb .cards-projetos-amb .cards .texts h3 {
+    color: #fff;
+  }
+
+  .content-projetos-amb .cc-projetos-amb .cards-projetos-amb .cards .texts p {
+    color: #fff;
+  }
+
+  .content-projetos-amb .cc-projetos-amb .cards-projetos-amb .cards .texts a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .texts-est .cc-texts-est p {
+    color: #fff;
+  }
+
+  .texts-est .cc-texts-est .flex-est a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .content-trans-edu .cc-projetos-amb .title-projetos-amb p {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .content-trans-edu .cc-projetos-amb .cards-projetos-amb .cards .texts h3 {
+    color: #fff;
+  }
+
+  .content-trans-edu .cc-projetos-amb .cards-projetos-amb .cards .texts p {
+    color: #fff;
+  }
+
+  .content-trans-edu .cc-projetos-amb .cards-projetos-amb .cards .texts a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .relatos-card .cc-cards-lot .cards:hover {
+    border-color: #000;
+  }
+
+  .relatos-card .cc-cards-lot .cards:hover .infos-card a {
+    border-color: #000;
+  }
+
+  .content-n-j .title-n-j p {
+    color: #fff;
+  }
+
+  .content-n-j .title-n-j span {
+    color: #fff;
+  }
+
+  .sec-text p b {
+    color: #fff;
+  }
+
+  .sec-text h4 {
+    color: #fff;
+  }
+
+  .content-programa .content-text p {
+    color: #fff;
+  }
+
+  .content-programa .content-text h2 {
+    color: #fff;
+  }
+
+  .content-text-programa .cc-text-programa h3 {
+    color: #fff;
+  }
+
+  .content-text-programa .cc-text-programa p {
+    color: #fff;
+  }
+
+  .box-social {
+    background: linear-gradient(90deg, #131314 0%, rgba(0, 93, 189, 0) 100%),
+      url(../../images/bg-social.png) #d3d3d3 50% / cover no-repeat;
+  }
+
+  .programa-trainee {
+    background: #1a1a1a;
+  }
+
+  .programa-trainee
+    .infos-trainee
+    .cards-trainee
+    .swiper-trainee
+    .swiper-wrapper
+    .swiper-slide:before {
+    background: linear-gradient(180deg, rgba(46, 81, 121, 0) 0%, #181819 100%);
+  }
+
+  .box-social-2 {
+    background: linear-gradient(90deg, #161817 0%, rgba(46, 162, 79, 0) 100%),
+      url(../../images/bg-grama.png) #d3d3d3 50% / cover no-repeat;
+  }
+
+  .flex-contato .texts h2 {
+    color: #fff;
+  }
+
+  .flex-contato .texts p {
+    color: #fff;
+  }
+
+  .flex-contato .texts a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .content-f-cana .content-text p {
+    color: #fff;
+  }
+
+  .portal-cana {
+    background: linear-gradient(180deg, #121111 35%, rgba(0, 43, 87, 0.5) 100%),
+      url(../../images/for-cana.jpg) #121111 50% / cover no-repeat;
+  }
+
+  .guia-rural .cc-rural .text-rural h2 {
+    color: #fff;
+  }
+
+  .guia-rural .cc-rural .text-rural h2 b {
+    color: #fff;
+  }
+
+  .guia-rural .cc-rural .text-rural p {
+    color: #fff;
+    b {
+      color: #fff;
+    }
+  }
+
+  .portal-cana .cc-cana .texts-cana a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .doc-obrigatorios {
+    background-color: #1a1a1a;
+  }
+
+  .doc-obrigatorios .content-doc .title h3 {
+    color: #fff;
+  }
+
+  .portal-compras .content-portal-compras h2 {
+    color: #fff;
+    b {
+      color: #fff;
+    }
+  }
+
+  .portal-compras .content-portal-compras p {
+    color: #fff;
+  }
+
+  .portal-compras .content-portal-compras .box-portal {
+    background: linear-gradient(
+        90deg,
+        #131314 45.89%,
+        rgb(23 25 26 / 72%) 62.8%,
+        rgba(0, 93, 189, 0) 78.67%
+      ),
+      url(../../images/portal-compras.jpg) #d3d3d3 560.422px -101.751px / 54.658%
+        180.436% no-repeat;
+  }
+
+  .portal-compras .content-portal-compras .box-portal a.btn-link {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .jornada-fornecedor .cc-jornada .tabs-jornada .tabs-box.active {
+    background-color: #2b2b2b;
+  }
+
+  .jornada-fornecedor .cc-jornada .tabs-jornada .tabs-box.active h4 {
+    color: #fff;
+  }
+
+  .jornada-fornecedor .cc-jornada .tabs-jornada .tabs-box.active:before {
+    filter: grayscale(1);
+  }
+
+  .jornada-fornecedor .cc-jornada .tabs-jornada .tabs-box.active:after {
+    background: #2b2b2b;
+    filter: grayscale(1) brightness(0.5);
+    right: 160px;
+  }
+  .jornada-fornecedor .cc-jornada .tabs-jornada .tabs-box:hover h4 {
+    color: #d3d3d3;
+  }
+
+  .jornada-fornecedor .cc-jornada .tabs-jornada .tabs-box:hover p {
+    color: #000;
+  }
+
+  .jornada-fornecedor .cc-jornada .tabs-jornada .tabs-box.active p {
+    color: #fff !important;
+  }
+
+  .jornada-fornecedor
+    .cc-jornada
+    .tab-content-wrapper
+    .content-antecipa
+    .title-antecipa
+    h2 {
+    color: #fff;
+  }
+
+  .jornada-fornecedor
+    .cc-jornada
+    .tab-content-wrapper
+    .content-antecipa
+    .title-antecipa
+    h3 {
+    color: #fff;
+  }
+
+  .jornada-fornecedor
+    .cc-jornada
+    .tab-content-wrapper
+    .content-antecipa
+    .cards-antecipa
+    .cards
+    .infos-card
+    .texts-card
+    h6 {
+    color: #fff;
+  }
+
+  .jornada-fornecedor
+    .cc-jornada
+    .tab-content-wrapper
+    .content-antecipa
+    .cards-antecipa
+    .cards
+    .infos-card
+    .texts-card
+    p {
+    color: #fff;
+  }
+
+  .jornada-fornecedor
+    .cc-jornada
+    .tab-content-wrapper
+    .content-antecipa
+    .cards-antecipa
+    .cards
+    .infos-card
+    .texts-card
+    a {
+    color: #fff;
+  }
+
+  .jornada-fornecedor
+    .cc-jornada
+    .tab-content-wrapper
+    .content-antecipa
+    .box-antecipa {
+    background: linear-gradient(90deg, #212224 0%, rgba(0, 93, 189, 0) 100%),
+      url(../../images/bg-grama.png) #d3d3d3 0px -131.626px / 100% 451.461% no-repeat;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .cc-infos-prop h3 {
+    color: #fff;
+  }
+
+  .btns-prop .btns-flex a.send {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .title-cadastro h2 {
+    color: #fff;
+  }
+
+  .selects-prop span {
+    color: #fff;
+  }
+
+  .jornada-fornecedor
+    .cc-jornada
+    .tab-content-wrapper
+    .cc-infos-prop
+    .inputs-prop
+    span {
+    color: #fff;
+  }
+
+  .selects-prop .flex-prop label {
+    color: #fff;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .cc-infos-prop p {
+    color: #fff;
+  }
+
+  .btns-prop span {
+    color: #fff;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .content-tab-text h2 {
+    color: #fff;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .content-tab-text p {
+    color: #fff;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .content-tab-text a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .boxs-tab-content .item {
+    background-color: #131314;
+    color: #000;
+  }
+
+  .jornada-fornecedor .cc-jornada .tab-content-wrapper .central-atendimento {
+    background-color: #3f4042;
+  }
+
+  .programa-semente .cc-texts p {
+    color: #fff;
+  }
+
+  .contato-programa-semente .cc-contato-programa .text h2 {
+    color: #fff;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .contato-programa-semente {
+    background-color: #1d1d1d;
+  }
+
+  .contato-programa-semente .cc-contato-programa .text p {
+    color: #fff;
+  }
+
+  .content-ras .cc-ras p {
+    color: #fff;
+  }
+
+  .content-ras .carrosel-ras .swiper .swiper-wrapper .swiper-slide {
+    background-color: #3f4042;
+  }
+
+  .content-ras .cc-ras a {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .pilares-quem-somos img {
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .texts-est .cc-texts-est .flex-est a img {
+    filter: invert(1);
+  }
+
+  .acesse-acc .cc-acesse h3 {
+    color: #fff;
+  }
+
+  .content-central-sus .title-central p {
+    color: #fff;
+  }
+}

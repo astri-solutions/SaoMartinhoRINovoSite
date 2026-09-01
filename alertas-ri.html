@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>São Martinho</title>
+    <meta name="description" content="" />
+    <meta property="og:title" content="São Martinho" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/import.dist.min.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="main-header">
+      <div class="acessibility-bar">
+        <div class="container container-full">
+          <div class="content-acessibility">
+            <div class="link-ri">
+              <a href="#" target="_blank">Institucional</a>
+
+              <a href="#" target="_blank">Relações com Investidores</a>
+            </div>
+
+            <div class="nav-contact">
+              <div class="item-nav-contact">
+                <a href="#" target="_blank">Canal de Ética</a>
+              </div>
+
+              <div class="item-nav-contact">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" type="button"> Imprensa </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Notícias</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#teste">Press Releases</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Assessoria de Imprensa</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="item-nav-contact">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" type="button"> Fale conosco </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Opção 1</a></li>
+                    <li><a class="dropdown-item" href="#">Opção 2</a></li>
+                    <li><a class="dropdown-item" href="#">Opção 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accessibility-tools">
+              <div class="tools">
+                <p>Acessibilidade</p>
+
+                <a
+                  href="#"
+                  id="toggleMode"
+                  type="button"
+                  class="accessibility-btn toggle-mode"
+                  aria-label="Alterar contraste"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Contraste"
+                >
+                  <img
+                    src="./images/icon-acessibilidade.svg"
+                    alt="Acessibilidade"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  id="increaseFont"
+                  type="button"
+                  class="accessibility-btn increase-font"
+                  aria-label="Aumentar fonte"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Aumentar fonte"
+                >
+                  <img
+                    src="./images/icon-increase-font.svg"
+                    alt="Aumentar fonte"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  id="decreaseFont"
+                  type="button"
+                  class="accessibility-btn decrease-font"
+                  aria-label="Diminuir fonte"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Diminuir fonte"
+                >
+                  <img
+                    src="./images/icon-redduce-font.svg"
+                    alt="Diminuir fonte"
+                  />
+                </a>
+              </div>
+
+              <div class="language-tools">
+                <a href="#" class="lang-on">PT</a>
+                <a href="#" class="lang-off">EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container container-full">
+        <header class="header menu-internal">
+          <div class="container container-full">
+            <div class="content-header">
+              <div class="logo">
+                <a class="main-link-logo" href="/">
+                  <img src="images/logo.svg" alt="Logo" />
+                </a>
+
+                <a class="hide-menu-logo" href="/">
+                  <img src="images/logo-color.svg" alt="Logo 2" />
+                </a>
+              </div>
+
+              <nav class="navigation">
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-1"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>A Companhia</p>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-1">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="https://saomartinho.astri.solutions/" target="_blank"
+                          >Visão Institucional</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="por-que-investir.html"
+                          >Por que investir na São Martinho?</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-2"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Governança Corporativa</p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-2">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="novo-mercado.html"
+                          >Novo Mercado</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="composicao-acionaria.html"
+                          >Composição Acionária</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="orgaos-comites.html"
+                          >Órgãos e Comitês</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="remuneracao-administracao.html"
+                          >Remuneração da Administração</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="atas-assembleias.html"
+                          >Atas e Assembleias</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="etica-conformidade.html"
+                          >Ética &amp; Conformidade</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="estatuto-politicas-outros.html"
+                          >Estatuto, Políticas e Outros Documentos</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="dividendos-juros.html"
+                          >Dividendos e Juros sobre Capital Próprio</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="boletim-voto-distancia.html"
+                          >Boletim de Voto a Distância</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="estatuto-social.html"
+                          >Estatuto Social</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="informe-governanca.html"
+                          >Informe de Governança</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-3"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Informações aos Investidores</p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-3">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="central-resultados.html">Central de Resultados</a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="documentos-cvm.html">Documentos entregues à CVM</a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="fatos-relevantes.html"
+                          >Fatos Relevantes e Comunicados</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="apresentacoes-teleconferencias.html"
+                          >Apresentações e Teleconferências</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page submenu-parent">
+                        <a class="dropdown-item" href="https://saomartinho.astri.solutions/relatos-integrados" target="_blank">
+                          Relatório de Sustentabilidade
+                        </a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="cobertura-analista.html"
+                          >Cobertura de Analista</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="recompra-acoes.html"
+                          >Recompra de Ações</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="planilha-resultados.html"
+                          >Planilha de Resultados</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="rating.html"
+                          >Rating</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="projecoes-safra.html"
+                          >Projeções de Safra</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="outros-documentos.html"
+                          >Outros Documentos</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-4"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Outras Informações</p>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-4">
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="informe-rendimentos.html"
+                          >Informe de Rendimentos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="calendario-eventos.html"
+                          >Calendário de Eventos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="cotacoes-graficos.html"
+                          >Cotações e Gráficos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="perguntas-frequentes.html"
+                          >Perguntas mais Frequentes</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page submenu-parent">
+                        <a class="dropdown-item" href="alertas-ri.html"
+                          >Alertas RI</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="fale-conosco.html"
+                          >Fale com RI</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+              <div class="header-actions">
+                <div class="search-bar">
+                  <a href="#">
+                    <img src="./images/icon_search.svg" alt="Search" />
+                  </a>
+                </div>
+
+                <button
+                  class="mobile-menu-toggle"
+                  id="mobileMenuToggle"
+                  aria-label="Menu"
+                >
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <div id="searchBox">
+      <div class="container container-full">
+        <div class="wrapper">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control inputBusca"
+              placeholder="Digite aqui a sua busca"
+            />
+
+            <div class="input-group-append">
+              <button
+                type="button"
+                class="input-group-text close-search-box"
+                role="button"
+              >
+                <img
+                  src="./images/icon-close.svg"
+                  alt="Close"
+                  title="Fechar Caixa de Pesquisa"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="search-help">
+            <small> Aperte Enter para pesquisar </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-internal">
+      <div class="container container-full">
+        <div class="container-title-image">
+          <div class="title-page">
+            <h1>Alertas RI</h1>
+
+            <div class="breadcrumb">
+              <a href="#" target="_blank">Home</a>
+              <a href="#" target="_blank">Outras Informações</a>
+              <a href="#" target="_blank">Alertas RI</a>
+            </div>
+          </div>
+
+          <div class="image-header-internal">
+            <img src="images/header-quem-somos-2.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inovacao-n-j">
+      <div class="box-n-j">
+        <div class="container container-full">
+          <div class="d-flex flex-box-nj">
+            <div class="first-box" data-aos="fade-up" data-aos-delay="200">
+              <h4>
+                Acreditamos na força da inovação para cultivar o presente e
+                construir o futuro.
+              </h4>
+
+              <h4>Nosso compromisso é com o desenvolvimento sustentável.</h4>
+
+              <p>
+                Guiados por objetivos estratégicos, transformamos inovação em
+                resultado:
+              </p>
+            </div>
+
+            <div class="cc-box-numbers" data-aos="fade-up" data-aos-delay="600">
+              <div class="box" data-aos="fade-up">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="62"
+                  viewBox="0 0 80 62"
+                  fill="none"
+                >
+                  <g opacity="0.24">
+                    <path
+                      d="M20.7579 62C14.0491 62 8.91228 59.2781 5.34737 53.8344C1.78246 48.3625 0 40.7862 0 31.1052C0 21.5365 1.81053 13.9602 5.43158 8.3761C9.05263 2.79203 14.2175 0 20.9263 0C27.4386 0 32.5895 2.52546 36.3789 7.57637C40.1684 12.6273 42.0632 19.9932 42.0632 29.6741C42.0632 40.3372 40.2386 48.3906 36.5895 53.8344C32.9684 59.2781 27.6912 62 20.7579 62ZM29.1368 31.8208C29.1368 25.6474 28.5614 20.4702 27.4105 16.2892C26.2877 12.1082 24.1684 10.0177 21.0526 10.0177C18.1614 10.0177 16.1123 11.9258 14.9053 15.742C13.6982 19.5302 13.0947 24.9459 13.0947 31.9891C13.0947 38.7237 13.7684 43.7185 15.1158 46.9735C16.4912 50.2005 18.4982 51.814 21.1368 51.814C23.7193 51.814 25.6982 50.1444 27.0737 46.8052C28.4491 43.4659 29.1368 38.4711 29.1368 31.8208Z"
+                      fill="#FCFCFC"
+                    />
+                    <path
+                      d="M80 0.841819V61.0319H66.9474V14.2267C65.6281 15.2089 63.7614 16.4014 61.3474 17.8045C58.9614 19.2075 56.1544 20.5685 52.9263 21.8873V9.93347C55.7895 8.67074 58.5263 7.3098 61.1368 5.85065C63.7754 4.39149 66.3439 2.72188 68.8421 0.841819H80Z"
+                      fill="#FCFCFC"
+                    />
+                  </g>
+                </svg>
+
+                <p>
+                  Inovar para continuar produzindo com
+                  <b
+                    >excelência o carbono renovável de menor custo do
+                    planeta.</b
+                  >
+                </p>
+              </div>
+
+              <div class="box" data-aos="fade-up">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="56"
+                  viewBox="0 0 80 56"
+                  fill="none"
+                >
+                  <g opacity="0.24">
+                    <path
+                      d="M18.6301 56C12.609 56 7.99874 53.5415 4.79924 48.6246C1.59975 43.6823 0 36.8391 0 28.095C0 19.4524 1.62494 12.6092 4.87482 7.56551C8.1247 2.52184 12.7602 0 18.7813 0C24.626 0 29.2489 2.28106 32.65 6.84318C36.051 11.4053 37.7515 18.0584 37.7515 26.8024C37.7515 36.4336 36.114 43.7076 32.8389 48.6246C29.589 53.5415 24.8528 56 18.6301 56ZM26.1502 28.7413C26.1502 23.1654 25.6338 18.4893 24.6008 14.7128C23.5931 10.9364 21.6911 9.0482 18.8947 9.0482C16.2998 9.0482 14.4607 10.7717 13.3774 14.2186C12.2941 17.6402 11.7525 22.5318 11.7525 28.8934C11.7525 34.9762 12.3571 39.4877 13.5664 42.4277C14.8008 45.3424 16.6021 46.7997 18.9702 46.7997C21.288 46.7997 23.0641 45.2917 24.2985 42.2756C25.533 39.2596 26.1502 34.7481 26.1502 28.7413Z"
+                      fill="#FCFCFC"
+                    />
+                    <path
+                      d="M54.1521 46.6477L56.9485 46.6096L69.0033 46.3435L80 46.0774V55.1256H42.0595V44.1385L55.8526 31.5166C59.8583 27.8416 62.8688 24.7622 64.8843 22.2783C66.8997 19.7692 67.9074 17.3994 67.9074 15.169C67.9074 13.1161 67.3154 11.456 66.1313 10.1887C64.9473 8.89613 63.3979 8.24983 61.4832 8.24983C59.4426 8.24983 57.8303 8.93415 56.6462 10.3028C55.4873 11.6461 54.8323 13.6103 54.6812 16.1955H42.8531V15.8914C42.8531 10.797 44.5158 6.89387 47.8413 4.18194C51.1667 1.44467 55.6889 0.0760353 61.4076 0.0760353C66.8241 0.0760353 71.2203 1.41933 74.5961 4.10591C77.9972 6.76714 79.6977 10.3535 79.6977 14.8649C79.6977 18.1091 78.69 21.2645 76.6745 24.3313C74.6591 27.3981 71.8501 30.7183 68.2475 34.2919C64.6449 37.8402 59.9465 41.9588 54.1521 46.6477Z"
+                      fill="#FCFCFC"
+                    />
+                  </g>
+                </svg>
+
+                <p>
+                  Inovar para transformar esse carbono renovável em
+                  <b>
+                    Novos Produtos de maior valor agregado, com impacto positivo
+                    para a humanidade.</b
+                  >
+                </p>
+              </div>
+
+              <div class="box" data-aos="fade-up">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="56"
+                  viewBox="0 0 80 56"
+                  fill="none"
+                >
+                  <g opacity="0.24">
+                    <path
+                      d="M18.781 55.6975C12.7111 55.6975 8.06349 53.2523 4.8381 48.3619C1.6127 43.4463 0 36.6401 0 27.9433C0 19.3473 1.6381 12.5411 4.91429 7.52465C8.19048 2.50822 12.8635 0 18.9333 0C24.8254 0 29.4857 2.26874 32.9143 6.80621C36.3429 11.3437 38.0571 17.9608 38.0571 26.6577C38.0571 36.2368 36.4063 43.4715 33.1048 48.3619C29.8286 53.2523 25.054 55.6975 18.781 55.6975ZM26.3619 28.5861C26.3619 23.0403 25.8413 18.3894 24.8 14.6334C23.7841 10.8773 21.8667 8.99932 19.0476 8.99932C16.4317 8.99932 14.5778 10.7135 13.4857 14.1418C12.3937 17.5449 11.8476 22.4101 11.8476 28.7373C11.8476 34.7873 12.4571 39.2744 13.6762 42.1985C14.9206 45.0975 16.7365 46.5469 19.1238 46.5469C21.4603 46.5469 23.2508 45.047 24.4952 42.0473C25.7397 39.0475 26.3619 34.5604 26.3619 28.5861Z"
+                      fill="#FCFCFC"
+                    />
+                    <path
+                      d="M69.1048 27.0358C72.6349 28.0945 75.327 29.7457 77.181 31.9892C79.0603 34.2075 80 36.9174 80 40.1188C80 44.6815 78.1079 48.4754 74.3238 51.5003C70.5397 54.5001 65.8032 56 60.1143 56C54.4 56 49.981 54.6766 46.8571 52.0297C43.7333 49.3828 42.1714 45.5134 42.1714 40.4213V40.1188H54.019C54.0952 42.4128 54.7302 44.19 55.9238 45.4504C57.1429 46.6856 58.8571 47.3032 61.0667 47.3032C63.0984 47.3032 64.7746 46.6352 66.0952 45.2991C67.4159 43.9379 68.0762 42.1607 68.0762 39.9676C68.0762 37.1947 67.1619 35.178 65.3333 33.9176C63.5048 32.632 60.2032 31.9892 55.4286 31.9892H54.6667V22.9142C59.7206 22.9142 63.2254 22.2336 65.181 20.8724C67.1619 19.4859 68.1524 17.4819 68.1524 14.8602C68.1524 12.9696 67.5175 11.4319 66.2476 10.2471C65.0032 9.03714 63.4032 8.43214 61.4476 8.43214C59.5175 8.43214 57.9429 9.03714 56.7238 10.2471C55.5048 11.4571 54.8698 13.0957 54.819 15.1627H42.8571C43.0349 10.474 44.7492 6.79361 48 4.12154C51.2508 1.42426 55.6571 0.0756246 61.219 0.0756246C66.7556 0.0756246 71.1873 1.48728 74.5143 4.3106C77.8667 7.13392 79.5429 10.6253 79.5429 14.7846C79.5429 17.7844 78.6794 20.3178 76.9524 22.3849C75.2508 24.4267 72.6349 25.977 69.1048 27.0358Z"
+                      fill="#FCFCFC"
+                    />
+                  </g>
+                </svg>
+
+                <p>
+                  Agregar valor ao nosso negócio alavancando os ativos tangíveis
+                  e intangíveis da Companhia,
+                  <b>conectando conhecimento, tecnologia e propósito.</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proposito-n-j p-80">
+        <div class="container container-full">
+          <h2 data-aos="fade-up" data-aos-delay="200">Propósito da Inovação</h2>
+
+          <div class="box-prop-n-j">
+            <div class="box" data-aos="fade-up" data-aos-delay="400">
+              <h4>Propósito:</h4>
+
+              <h6>
+                Inovamos para continuarmos construindo um futuro que nos permita
+                sonhar com o que ainda é impossível.
+              </h6>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+              <h4>Missão:</h4>
+
+              <h6>
+                Ampliar e fortalecer a conexão com o ecossistema global por meio
+                de parcerias estratégicas, projetos de impacto e a contínua
+                promoção da cultura de inovação.
+              </h6>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="800">
+              <h4>Visão:</h4>
+
+              <h6>
+                Ser reconhecida como uma das dez empresas mais inovadoras do
+                país e líder em inovação no agronegócio até 2030, impulsionando
+                a transformação do setor com soluções sustentáveis e de impacto.
+              </h6>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="1000">
+              <h4>Valores:</h4>
+
+              <h6>
+                Integridade, respeito às pessoas e meio ambiente, excelência
+                técnica, foco em resultados, sustentabilidade e segurança.
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="floresce-n-j p-80">
+        <div class="container container-full">
+          <div class="cc-floresce">
+            <div
+              class="content-text"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <h2>A inovação floresce quando<b> cultivada em conjunto.</b></h2>
+
+              <p>
+                Acreditamos na força das conexões para acelerar ideias, explorar
+                novas fronteiras e transformar desafios em oportunidades. Por
+                isso, a inovação aberta é um dos pilares estratégicos da São
+                Martinho na construção de soluções que geram valor para toda a
+                cadeia.
+              </p>
+
+              <p>
+                Oferecemos ao ecossistema um ambiente físico, lógico e cultural
+                altamente propício ao modelo de inovação aberta e plenamente
+                conectado em toda a sua extensão para a realização de projetos.
+              </p>
+            </div>
+
+            <div
+              class="content-image"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <img src="images/image-box-4.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="parceiros-f">
+            <div class="title-parceiros-f">
+              <h2 data-aos="fade-up" data-aos-delay="200">
+                Nossos parceiros
+                <b>contam com:</b>
+              </h2>
+            </div>
+
+            <div class="box-parceiros-f">
+              <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/logo-box-parceiros-1.svg" alt="" />
+
+                <h6>
+                  Conhecimento dos nossos especialistas, que possuem know-how
+                  consolidado.
+                </h6>
+              </div>
+
+              <div class="box" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/logo-box-parceiros-2.svg" alt="" />
+
+                <h6>Acesso aos nossos dados operacionais</h6>
+              </div>
+
+              <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <img src="images/logo-box-parceiros-3.svg" alt="" />
+
+                <h6>Ambiente de testes digitais</h6>
+              </div>
+
+              <div class="box" data-aos="fade-up" data-aos-delay="800">
+                <img src="images/logo-box-parceiros-4.svg" alt="" />
+
+                <h6>
+                  Possibilidade de escalar soluções com o respaldo da força da
+                  marca São Martinho.
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="cc-floresce cc-floresce-2">
+            <div class="content-text" data-aos="fade-right" data-aos-delay="200">
+              <h2>Pesquisa e <b>Desenvolvimento</b></h2>
+
+              <p>
+                A São Martinho investe continuamente em pesquisa,
+                desenvolvimento e parcerias estratégicas para impulsionar
+                soluções inovadoras que aceleram o avanço tecnológico do setor
+                agroindustrial.
+              </p>
+
+              <p>
+                Nosso compromisso com a inovação e com a valorização da
+                propriedade intelectual reforça o papel da companhia como
+                protagonista na criação de tecnologias sustentáveis, capazes de
+                gerar valor, competitividade e impacto positivo para o
+                agronegócio.
+              </p>
+            </div>
+
+            <div class="content-image" data-aos="fade-left" data-aos-delay="400">
+              <img src="images/image-box-4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="centro-martinho p-80">
+        <div class="container container-full">
+          <div class="cc-floresce cc-floresce-3">
+            <div class="content-text" data-aos="fade-right" data-aos-delay="200">
+              <h2>
+                Centro de Inovação <br />
+                <b>São Martinho</b>
+              </h2>
+
+              <p>
+                Este é o coração da gestão da inovação na São Martinho — onde
+                nossos esforços ganham direção, ritmo e propósito. Um ambiente
+                inspirador para criação e avaliação de tecnologias habilitadoras
+                que nos permitem sonhar com o impossível​.
+              </p>
+
+              <p>
+                Estamos conectados a um ecossistema robusto de inovação, que
+                reúne hubs tecnológicos, centros de pesquisa, startups,
+                universidades e instituições estratégicas. Essas parcerias
+                fortalecem nossa capacidade de lançar e resolver desafios de
+                forma colaborativa, impulsionar projetos de Pesquisa &
+                Desenvolvimento e acelerar a geração de valor por meio da
+                ciência, da tecnologia e do empreendedorismo.
+              </p>
+            </div>
+
+            <div class="content-image" data-aos="fade-left" data-aos-delay="400">
+              <img src="images/image-box-4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="first-content-footer">
+        <div class="container container-full">
+          <div class="links-footer">
+            <div class="list-footer">
+              <h5>A Companhia</h5>
+
+              <a href="https://saomartinho.astri.solutions/" target="_blank">Visão Institucional</a>
+              <a href="/por-que-investir.html">Por que investir na São Martinho</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Governança Corporativa</h5>
+
+              <a href="/novo-mercado.html">Novo Mercado</a>
+              <a href="/composicao-acionaria.html">Composição Acionária</a>
+              <a href="/orgaos-comites.html">Órgãos e Comitês</a>
+              <a href="/remuneracao-administracao.html">Remuneração da Administração</a>
+              <a href="/atas-assembleias.html">Atas e Assembleias</a>
+              <a href="/etica-conformidade.html">Ética &amp; Conformidade</a>
+              <a href="/estatuto-politicas-outros.html">Estatuto, Políticas e Outros Documentos</a>
+              <a href="/dividendos-juros.html">Dividendos e Juros sobre Capital Próprio</a>
+              <a href="/boletim-voto-distancia.html">Boletim de Voto a Distância</a>
+              <a href="/estatuto-social.html">Estatuto Social</a>
+              <a href="/informe-governanca.html">Informe de Governança</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Informações aos Investidores</h5>
+
+              <a href="/central-resultados.html">Central de Resultados</a>
+              <a href="/documentos-cvm.html">Documentos entregues à CVM</a>
+              <a href="/fatos-relevantes.html">Fatos Relevantes e Comunicados</a>
+              <a href="/apresentacoes-teleconferencias.html">Apresentações e Teleconferências</a>
+              <a href="https://saomartinho.astri.solutions/relatos-integrados">Relatório de Sustentabilidade</a>
+              <a href="/cobertura-analista.html">Cobertura de Analista</a>
+              <a href="/recompra-acoes.html">Recompra de Ações</a>
+              <a href="/planilha-resultados.html">Planilha de Resultados</a>
+              <a href="/rating.html">Rating</a>
+              <a href="/projecoes-safra.html">Projeções de Safra</a>
+              <a href="/outros-documentos.html">Outros Documentos</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Outras Informações</h5>
+
+              <a href="/informe-rendimentos.html">Informe de Rendimentos</a>
+              <a href="/calendario-eventos.html">Calendário de Eventos</a>
+              <a href="/cotacoes-graficos.html">Cotações e Gráficos</a>
+              <a href="/perguntas-frequentes.html">Perguntas mais Frequentes</a>
+              <a href="/alertas-ri.html">Alertas RI</a>
+              <a href="/fale-conosco.html">Fale com RI</a>
+            </div>
+
+          </div>
+
+          <div class="logo-footer">
+            <div class="logo">
+              <a href="/" target="_blank">
+                <img src="images/logo-footer.svg" alt="" />
+              </a>
+            </div>
+
+            <div class="social-footer">
+              <p>São Martinho nas redes:</p>
+
+              <div class="social-links">
+                <a href="#" target="_blank">
+                  <img src="images/icon-linkedin.svg" alt="" />
+                </a>
+
+                <a href="#" target="_blank">
+                  <img src="images/icon-instagram.svg" alt="" />
+                </a>
+
+                <a href="#" target="_blank">
+                  <img src="images/icon-facebook.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="termos-politica">
+              <a href="#" target="_blank">Termos e Condições</a>
+              <a href="#" target="_blank">Política de Privacidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="powered-footer">
+        <div class="container container-full">
+          <div class="content-powered">
+            <p>São Martinho © Todos os direitos reservados 2025</p>
+
+            <a href="#" target="_blank">
+              <img src="images/astri-logo.svg" alt="" />
+            </a>
+
+            <a href="#" class="back-to-top">
+              Voltar ao topo
+
+              <img src="images/arrow-top.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/timeline.js"></script>
+  </body>
+</html>

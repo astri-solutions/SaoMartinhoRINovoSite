@@ -1,0 +1,44 @@
+// @font-face {
+//   font-family: "Univers";
+//   src: url("../../fonts/Arimo/woff/Arimo-Medium.woff2") format("woff2");
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: "Univers";
+  src: url("../../fonts/univers/UniversBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("../../fonts/univers/UniversBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("../../fonts/univers/UniversRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Univers";
+  src: url("../../fonts/univers/UniversLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Univers";
+  font-weight: 400;
+}

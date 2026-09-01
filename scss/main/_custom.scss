@@ -1,0 +1,115 @@
+.container {
+  @media (min-width: 992px) {
+    max-width: 991px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1050px;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.p-40 {
+  padding: 40px 0px;
+}
+
+.p-80 {
+  padding: 80px 0px;
+}
+
+.container-full {
+  margin: 0 auto;
+
+  @media (min-width: 1260px) {
+    max-width: 1130px !important;
+  }
+
+  @media (min-width: 1360px) {
+    max-width: 1280px !important;
+  }
+
+  @media (min-width: 1660px) {
+    max-width: 1236px !important;
+  }
+}
+
+.table-responsive {
+  overflow-x: auto;
+  position: relative;
+  border-radius: 8px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), transparent);
+  }
+
+  &.scrolled-left::before {
+    opacity: 1;
+  }
+
+  &.scrolled-right::after {
+    opacity: 1;
+  }
+
+  table {
+    position: relative;
+    z-index: 0;
+    background: white;
+  }
+
+  .dark-mode & {
+    &::before {
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.06),
+        transparent
+      );
+    }
+
+    &::after {
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.06),
+        transparent
+      );
+    }
+
+    table {
+      background: #1a1a1a;
+    }
+  }
+}
+
+.increase-font,
+.decrease-font {
+  transition: opacity 0.3s ease, transform 0.2s ease;
+
+  &:hover:not([style*="pointer-events: none"]) {
+    transform: scale(1.1);
+  }
+
+  &[style*="opacity: 0.5"] {
+    cursor: not-allowed;
+  }
+}

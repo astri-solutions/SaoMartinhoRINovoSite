@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>São Martinho</title>
+    <meta name="description" content="" />
+    <meta property="og:title" content="São Martinho" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/import.dist.min.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="main-header">
+      <div class="acessibility-bar">
+        <div class="container container-full">
+          <div class="content-acessibility">
+            <div class="link-ri">
+              <a href="#" target="_blank">Relações com Investidores</a>
+
+              <a href="https://saomartinho.astri.solutions/" target="_blank">Institucional</a>
+            </div>
+
+            <div class="nav-contact">
+              <div class="item-nav-contact">
+                <a href="#" target="_blank">Canal de Ética</a>
+              </div>
+
+              <div class="item-nav-contact">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" type="button"> Imprensa </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Notícias</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#teste">Press Releases</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Assessoria de Imprensa</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="item-nav-contact">
+                <div class="dropdown">
+                  <a
+                    class="dropdown-toggle"
+                    href="#"
+                    role="button"
+                    aria-expanded="false"
+                  >
+                    Fale conosco
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Opção 1</a></li>
+                    <li><a class="dropdown-item" href="#">Opção 2</a></li>
+                    <li><a class="dropdown-item" href="#">Opção 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accessibility-tools">
+              <div class="tools">
+                <p>Acessibilidade</p>
+
+                <a
+                  href="#"
+                  id="toggleMode"
+                  type="button"
+                  class="accessibility-btn toggle-mode"
+                  aria-label="Alterar contraste"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Contraste"
+                >
+                  <img
+                    src="./images/icon-acessibilidade.svg"
+                    alt="Acessibilidade"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  id="increaseFont"
+                  type="button"
+                  class="accessibility-btn increase-font"
+                  aria-label="Aumentar fonte"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Aumentar fonte"
+                >
+                  <img
+                    src="./images/icon-increase-font.svg"
+                    alt="Aumentar fonte"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  id="decreaseFont"
+                  type="button"
+                  class="accessibility-btn decrease-font"
+                  aria-label="Diminuir fonte"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Diminuir fonte"
+                >
+                  <img
+                    src="./images/icon-redduce-font.svg"
+                    alt="Diminuir fonte"
+                  />
+                </a>
+              </div>
+
+              <div class="language-tools">
+                <a href="#" class="lang-on">PT</a>
+                <a href="#" class="lang-off">EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container container-full">
+        <header class="header">
+          <div class="container container-full">
+            <div class="content-header">
+              <div class="logo">
+                <a class="main-link-logo" href="/">
+                  <img src="images/logo.svg" alt="Logo" />
+                </a>
+
+                <a class="hide-menu-logo" href="/">
+                  <img src="images/logo-color.svg" alt="Logo 2" />
+                </a>
+              </div>
+
+              <nav class="navigation">
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-1"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>A Companhia</p>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-1">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="https://saomartinho.astri.solutions/" target="_blank"
+                          >Visão Institucional</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="por-que-investir.html"
+                          >Por que investir na São Martinho?</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-2"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Governança Corporativa</p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-2">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="novo-mercado.html"
+                          >Novo Mercado</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="composicao-acionaria.html"
+                          >Composição Acionária</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="orgaos-comites.html"
+                          >Órgãos e Comitês</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="remuneracao-administracao.html"
+                          >Remuneração da Administração</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="atas-assembleias.html"
+                          >Atas e Assembleias</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="etica-conformidade.html"
+                          >Ética &amp; Conformidade</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="estatuto-politicas-outros.html"
+                          >Estatuto, Políticas e Outros Documentos</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="dividendos-juros.html"
+                          >Dividendos e Juros sobre Capital Próprio</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="boletim-voto-distancia.html"
+                          >Boletim de Voto a Distância</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="estatuto-social.html"
+                          >Estatuto Social</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="informe-governanca.html"
+                          >Informe de Governança</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-3"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Informações aos Investidores</p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-3">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="central-resultados.html">Central de Resultados</a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="documentos-cvm.html">Documentos entregues à CVM</a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="fatos-relevantes.html"
+                          >Fatos Relevantes e Comunicados</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="apresentacoes-teleconferencias.html"
+                          >Apresentações e Teleconferências</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page submenu-parent">
+                        <a class="dropdown-item" href="https://saomartinho.astri.solutions/relatos-integrados" target="_blank">
+                          Relatório de Sustentabilidade
+                        </a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="cobertura-analista.html"
+                          >Cobertura de Analista</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="recompra-acoes.html"
+                          >Recompra de Ações</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="planilha-resultados.html"
+                          >Planilha de Resultados</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="rating.html"
+                          >Rating</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="projecoes-safra.html"
+                          >Projeções de Safra</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="outros-documentos.html"
+                          >Outros Documentos</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-4"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Outras Informações</p>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-4">
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="informe-rendimentos.html"
+                          >Informe de Rendimentos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="calendario-eventos.html"
+                          >Calendário de Eventos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="cotacoes-graficos.html"
+                          >Cotações e Gráficos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="perguntas-frequentes.html"
+                          >Perguntas mais Frequentes</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page submenu-parent">
+                        <a class="dropdown-item" href="alertas-ri.html"
+                          >Alertas RI</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="fale-conosco.html"
+                          >Fale com RI</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+              <div class="header-actions">
+                <div class="search-bar">
+                  <a href="#">
+                    <img src="./images/icon_search.svg" alt="Search" />
+                  </a>
+                </div>
+
+                <button
+                  class="mobile-menu-toggle"
+                  id="mobileMenuToggle"
+                  aria-label="Menu"
+                >
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <div id="searchBox">
+      <div class="container container-full">
+        <div class="wrapper">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control inputBusca"
+              placeholder="Digite aqui a sua busca"
+            />
+
+            <div class="input-group-append">
+              <button
+                type="button"
+                class="input-group-text close-search-box"
+                role="button"
+              >
+                <img
+                  src="./images/icon-close.svg"
+                  alt="Close"
+                  title="Fechar Caixa de Pesquisa"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="search-help">
+            <small> Aperte Enter para pesquisar </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="banner-home" role="banner" aria-label="Banner principal">
+      <div class="swiper banner-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-slide="1">
+            <div class="video-background">
+              <video
+                src="videos/video.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+              <div class="video-overlay"></div>
+            </div>
+
+            <div class="slide-content">
+              <div class="container-text-slide">
+                <h2>
+                  Um dos <b>maiores produtores</b> de açúcar, etanol e
+                  bioenergia do Brasil
+                </h2>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Saiba mais sobre nossos produtos"
+                >
+                  Saiba mais
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" data-slide="2">
+            <div class="video-background">
+              <video
+                src="videos/video-banner-home.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+              <div class="video-overlay"></div>
+            </div>
+
+            <div class="slide-content">
+              <div class="container-text-slide">
+                <h2>Bicampeã em Inovação na <b>categoria Agronegócio</b></h2>
+                <div class="slide-subtitle">
+                  <span>*Prêmio Valor Inovação 2025</span>
+                </div>
+                <a href="#" target="_blank" rel="noopener"> Saiba mais </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide" data-slide="3">
+            <div class="video-background">
+              <video
+                src="videos/video-smart.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-hidden="true"
+              ></video>
+              <div class="video-overlay"></div>
+            </div>
+
+            <div class="slide-content">
+              <div class="container-text-slide">
+                <h2>Entre os <b>Melhores Lugares para Trabalhar</b></h2>
+
+                <div class="slide-subtitle">
+                  <span>*Lugares Incríveis para Trabalhar</span>
+                  <span>*GPTW</span>
+                </div>
+                <a href="#" target="_blank" rel="noopener"> Saiba mais </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-ui" role="group" aria-label="Controles do banner">
+          <button
+            class="swiper-btn prev"
+            type="button"
+            aria-label="Slide anterior"
+          >
+            <img src="images/arrow-banner.svg" alt="" />
+          </button>
+
+          <div class="swiper-counter" role="status" aria-live="polite">
+            <span class="current" aria-label="Slide atual"></span>
+            <span class="separator" aria-hidden="true"> / </span>
+            <span class="total" aria-label="Total de slides"></span>
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-label="Progresso do slide"
+            >
+              <span class="progress"></span>
+            </div>
+          </div>
+
+          <button
+            class="swiper-btn next"
+            type="button"
+            aria-label="Próximo slide"
+          >
+            <img src="images/arrow-banner.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="central-resultados-home p-80">
+      <div class="container container-full">
+        <div class="content-central-resultados-home">
+          <div
+            class="text-central-resultados-home"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <h2>Central de <b>Resultados</b></h2>
+
+            <div class="home-results">
+              <a href="/central-resultados.html" class="home-results__quarter">
+                4T25
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+
+              <form class="home-results__downloads" id="home-downloads-form">
+                <label class="home-results__item">
+                  <input type="checkbox" name="doc" value="release" />
+                  <span>Resultados 4T25</span>
+                </label>
+                <label class="home-results__item">
+                  <input type="checkbox" name="doc" value="apresentacao" />
+                  <span>Apresentação da Teleconferência 4T25</span>
+                </label>
+                <label class="home-results__item">
+                  <input type="checkbox" name="doc" value="audio" />
+                  <span>Áudio Teleconferência 4T25</span>
+                </label>
+              </form>
+
+              <button type="button" class="btn btn--outline" onclick="document.getElementById('home-downloads-form').querySelectorAll('input:checked').forEach(()=>{})">
+                DOWNLOAD
+              </button>
+            </div>
+
+            <a href="/central-resultados.html" class="text-central-resultados-home__more">Ver todos os resultados</a>
+          </div>
+
+          <div
+            class="text-central-resultados-home"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <h2>Últimas <b>Notícias</b></h2>
+
+            <ul class="home-news-list" aria-label="Últimas notícias">
+              <li class="home-news-list__item">
+                <a href="/fatos-relevantes.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    25 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Guidance de Produção e Capex para Safra 2026/27</span>
+                </a>
+              </li>
+              <li class="home-news-list__item">
+                <a href="/central-resultados.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    25 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Divulgação de Resultados do 4T25</span>
+                </a>
+              </li>
+              <li class="home-news-list__item">
+                <a href="/atas-assembleias.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    20 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Edital de Convocação — AGO/E</span>
+                </a>
+              </li>
+              <li class="home-news-list__item">
+                <a href="/fatos-relevantes.html" class="home-news-list__link">
+                  <span class="home-news-list__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="13" height="13"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    10 de maio de 2026
+                  </span>
+                  <span class="home-news-list__title">Comunicado ao Mercado — Projeções de Safra 2026/27</span>
+                </a>
+              </li>
+            </ul>
+
+            <a href="/central-resultados.html" class="text-central-resultados-home__more">Ver todos os resultados</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-quicklinks" aria-label="Acesso rápido">
+      <div class="container container-full">
+        <div class="home-quicklinks__inner">
+
+          <a href="/central-resultados.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 36 16 24 24 30 34 18 42 24"/><polyline points="34 18 42 18 42 26"/></svg>
+            <span>CENTRAL DE<br>RESULTADOS</span>
+          </a>
+
+          <a href="/planilha-resultados.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="10" width="36" height="28" rx="2"/><line x1="6" y1="18" x2="42" y2="18"/><line x1="6" y1="26" x2="42" y2="26"/><line x1="16" y1="10" x2="16" y2="38"/><line x1="26" y1="10" x2="26" y2="38"/></svg>
+            <span>PLANILHA DE<br>RESULTADOS</span>
+          </a>
+
+          <a href="/fatos-relevantes.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 28l-4 4v4h8v-4"/><path d="M14 22c0-5.523 4.477-10 10-10s10 4.477 10 10"/><path d="M34 28l4 4v4h-8v-4"/><ellipse cx="24" cy="22" rx="10" ry="6"/><line x1="24" y1="16" x2="24" y2="28"/><line x1="18" y1="22" x2="30" y2="22"/></svg>
+            <span>FATOS RELEVANTES E<br>COMUNICADOS</span>
+          </a>
+
+          <a href="/documentos-cvm.html" class="home-quicklinks__item">
+            <svg class="home-quicklinks__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h32v26a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V14z"/><path d="M6 8h36v6H6z"/><line x1="16" y1="24" x2="32" y2="24"/><line x1="16" y1="30" x2="28" y2="30"/></svg>
+            <span>DOCUMENTOS ENTREGUES<br>À CVM</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="home-media">
+      <div class="container container-full">
+        <div class="home-media__inner">
+
+          <!-- Vídeo Institucional -->
+          <div class="home-media__video">
+            <div class="home-section-heading">
+              <h2>Vídeo <b>Institucional</b></h2>
+            </div>
+
+            <div class="home-media__video-thumb">
+              <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="São Martinho — vídeo institucional" loading="lazy" />
+              <a href="#" class="home-media__video-play" aria-label="Assistir vídeo institucional">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="32" height="32"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </a>
+            </div>
+
+            <a href="#" class="home-media__more">Ver todos os vídeos</a>
+          </div>
+
+          <!-- Calendário de Eventos -->
+          <div class="home-media__calendar">
+            <div class="home-section-heading">
+              <h2>Calendário de <b>Eventos</b></h2>
+            </div>
+
+            <ul class="home-events-list" aria-label="Próximos eventos">
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">10</span>
+                  <span class="month">AGO</span>
+                </span>
+                <span class="home-events-list__title">Divulgação de Resultados 1T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">11</span>
+                  <span class="month">AGO</span>
+                </span>
+                <span class="home-events-list__title">Teleconferência de Resultados 1T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">09</span>
+                  <span class="month">NOV</span>
+                </span>
+                <span class="home-events-list__title">Divulgação de Resultados 2T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+              <li class="home-events-list__item">
+                <span class="home-events-list__date">
+                  <span class="day">10</span>
+                  <span class="month">NOV</span>
+                </span>
+                <span class="home-events-list__title">Teleconferência de Resultados 2T26</span>
+                <span class="home-events-list__actions">
+                  <a href="#" aria-label="Adicionar ao Outlook"><img src="/assets/Icones/icon-outlook.png" alt="Outlook" width="20" height="20" /></a>
+                  <a href="#" aria-label="Adicionar ao Gmail"><img src="/assets/Icones/icon-gmail.png" alt="Gmail" width="20" height="20" /></a>
+                </span>
+              </li>
+            </ul>
+
+            <a href="/calendario-eventos.html" class="home-media__more">Ver todos os eventos</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="home-contact-strip" aria-label="Contato e alertas">
+      <div class="container container-full">
+        <div class="home-contact-strip__inner">
+
+          <!-- Fale com RI -->
+          <div class="home-contact-strip__fale">
+            <div class="home-contact-strip__fale-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="36" height="36"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="home-contact-strip__fale-body">
+              <h3 class="home-contact-strip__title">FALE COM RI</h3>
+              <p class="home-contact-strip__desc">Tire suas dúvidas ou envie suas sugestões</p>
+              <div class="home-contact-strip__info">
+                <span>E-mail: <a href="mailto:ri@saomartinho.com.br">ri@saomartinho.com.br</a></span>
+                <span>Tel: <a href="tel:+551121054100">(11) 2105-4100</a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-contact-strip__divider" aria-hidden="true"></div>
+
+          <!-- Alertas RI -->
+          <div class="home-contact-strip__alertas">
+            <div class="home-contact-strip__alertas-header">
+              <h3 class="home-contact-strip__title">ALERTAS RI</h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="28" height="28"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <p class="home-contact-strip__desc">Cadastre-se agora para receber nossos alertas por e-mail</p>
+            <form class="home-contact-strip__form" data-mailing-form novalidate>
+              <div class="home-contact-strip__form-row">
+                <label class="sr-only" for="alertas-email">E-mail</label>
+                <input id="alertas-email" class="home-contact-strip__input" type="email" name="email" placeholder="Digite seu e-mail" required />
+                <button type="submit" class="btn btn--primary">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="first-content-footer">
+        <div class="container container-full">
+          <div class="links-footer">
+            <div class="list-footer">
+              <h5>A Companhia</h5>
+
+              <a href="https://saomartinho.astri.solutions/" target="_blank">Visão Institucional</a>
+              <a href="/por-que-investir.html">Por que investir na São Martinho</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Governança Corporativa</h5>
+
+              <a href="/novo-mercado.html">Novo Mercado</a>
+              <a href="/composicao-acionaria.html">Composição Acionária</a>
+              <a href="/orgaos-comites.html">Órgãos e Comitês</a>
+              <a href="/remuneracao-administracao.html">Remuneração da Administração</a>
+              <a href="/atas-assembleias.html">Atas e Assembleias</a>
+              <a href="/etica-conformidade.html">Ética &amp; Conformidade</a>
+              <a href="/estatuto-politicas-outros.html">Estatuto, Políticas e Outros Documentos</a>
+              <a href="/dividendos-juros.html">Dividendos e Juros sobre Capital Próprio</a>
+              <a href="/boletim-voto-distancia.html">Boletim de Voto a Distância</a>
+              <a href="/estatuto-social.html">Estatuto Social</a>
+              <a href="/informe-governanca.html">Informe de Governança</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Informações aos Investidores</h5>
+
+              <a href="/central-resultados.html">Central de Resultados</a>
+              <a href="/documentos-cvm.html">Documentos entregues à CVM</a>
+              <a href="/fatos-relevantes.html">Fatos Relevantes e Comunicados</a>
+              <a href="/apresentacoes-teleconferencias.html">Apresentações e Teleconferências</a>
+              <a href="https://saomartinho.astri.solutions/relatos-integrados">Relatório de Sustentabilidade</a>
+              <a href="/cobertura-analista.html">Cobertura de Analista</a>
+              <a href="/recompra-acoes.html">Recompra de Ações</a>
+              <a href="/planilha-resultados.html">Planilha de Resultados</a>
+              <a href="/rating.html">Rating</a>
+              <a href="/projecoes-safra.html">Projeções de Safra</a>
+              <a href="/outros-documentos.html">Outros Documentos</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Outras Informações</h5>
+
+              <a href="/informe-rendimentos.html">Informe de Rendimentos</a>
+              <a href="/calendario-eventos.html">Calendário de Eventos</a>
+              <a href="/cotacoes-graficos.html">Cotações e Gráficos</a>
+              <a href="/perguntas-frequentes.html">Perguntas mais Frequentes</a>
+              <a href="/alertas-ri.html">Alertas RI</a>
+              <a href="/fale-conosco.html">Fale com RI</a>
+            </div>
+
+          </div>
+
+          <div class="logo-footer">
+            <div class="logo">
+              <a href="/" target="_blank">
+                <img src="images/logo-footer.svg" alt="" />
+              </a>
+            </div>
+
+            <div class="social-footer">
+              <p>São Martinho nas redes:</p>
+
+              <div class="social-links">
+                <a href="#" target="_blank">
+                  <img src="images/icon-linkedin.svg" alt="" />
+                </a>
+
+                <a href="#" target="_blank">
+                  <img src="images/icon-instagram.svg" alt="" />
+                </a>
+
+                <a href="#" target="_blank">
+                  <img src="images/icon-facebook.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="termos-politica">
+              <a href="#" target="_blank">Termos e Condições</a>
+              <a href="#" target="_blank">Política de Privacidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="powered-footer">
+        <div class="container container-full">
+          <div class="content-powered">
+            <p>São Martinho © Todos os direitos reservados 2025</p>
+
+            <a href="#" target="_blank">
+              <img src="images/astri-logo.svg" alt="" />
+            </a>
+
+            <a href="#" class="back-to-top">
+              Voltar ao topo
+
+              <img src="images/arrow-top.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
+  </body>
+</html>

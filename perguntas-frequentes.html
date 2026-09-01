@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>São Martinho</title>
+    <meta name="description" content="" />
+    <meta property="og:title" content="São Martinho" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/import.dist.min.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="main-header">
+      <div class="acessibility-bar">
+        <div class="container container-full">
+          <div class="content-acessibility">
+            <div class="link-ri">
+              <a href="#" target="_blank">Institucional</a>
+
+              <a href="#" target="_blank">Relações com Investidores</a>
+            </div>
+
+            <div class="nav-contact">
+              <div class="item-nav-contact">
+                <a href="#" target="_blank">Canal de Ética</a>
+              </div>
+
+              <div class="item-nav-contact">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" type="button"> Imprensa </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Notícias</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#teste">Press Releases</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Assessoria de Imprensa</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="item-nav-contact">
+                <div class="dropdown">
+                  <a class="dropdown-toggle" type="button"> Fale conosco </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Opção 1</a></li>
+                    <li><a class="dropdown-item" href="#">Opção 2</a></li>
+                    <li><a class="dropdown-item" href="#">Opção 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accessibility-tools">
+              <div class="tools">
+                <p>Acessibilidade</p>
+
+                <a
+                  href="#"
+                  id="toggleMode"
+                  type="button"
+                  class="accessibility-btn toggle-mode"
+                  aria-label="Alterar contraste"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Contraste"
+                >
+                  <img
+                    src="./images/icon-acessibilidade.svg"
+                    alt="Acessibilidade"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  id="increaseFont"
+                  type="button"
+                  class="accessibility-btn increase-font"
+                  aria-label="Aumentar fonte"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Aumentar fonte"
+                >
+                  <img
+                    src="./images/icon-increase-font.svg"
+                    alt="Aumentar fonte"
+                  />
+                </a>
+
+                <a
+                  href="#"
+                  id="decreaseFont"
+                  type="button"
+                  class="accessibility-btn decrease-font"
+                  aria-label="Diminuir fonte"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="left"
+                  data-bs-title="Diminuir fonte"
+                >
+                  <img
+                    src="./images/icon-redduce-font.svg"
+                    alt="Diminuir fonte"
+                  />
+                </a>
+              </div>
+
+              <div class="language-tools">
+                <a href="#" class="lang-on">PT</a>
+                <a href="#" class="lang-off">EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container container-full">
+        <header class="header menu-internal">
+          <div class="container container-full">
+            <div class="content-header">
+              <div class="logo">
+                <a class="main-link-logo" href="/">
+                  <img src="images/logo.svg" alt="Logo" />
+                </a>
+
+                <a class="hide-menu-logo" href="/">
+                  <img src="images/logo-color.svg" alt="Logo 2" />
+                </a>
+              </div>
+
+              <nav class="navigation">
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-1"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>A Companhia</p>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-1">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="https://saomartinho.astri.solutions/" target="_blank"
+                          >Visão Institucional</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="por-que-investir.html"
+                          >Por que investir na São Martinho?</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-2"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Governança Corporativa</p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-2">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="novo-mercado.html"
+                          >Novo Mercado</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="composicao-acionaria.html"
+                          >Composição Acionária</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="orgaos-comites.html"
+                          >Órgãos e Comitês</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="remuneracao-administracao.html"
+                          >Remuneração da Administração</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="atas-assembleias.html"
+                          >Atas e Assembleias</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="etica-conformidade.html"
+                          >Ética &amp; Conformidade</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="estatuto-politicas-outros.html"
+                          >Estatuto, Políticas e Outros Documentos</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="dividendos-juros.html"
+                          >Dividendos e Juros sobre Capital Próprio</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="boletim-voto-distancia.html"
+                          >Boletim de Voto a Distância</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="estatuto-social.html"
+                          >Estatuto Social</a
+                        >
+                      </li>
+
+                       <li class="dropdown-page">
+                        <a class="dropdown-item" href="informe-governanca.html"
+                          >Informe de Governança</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-3"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Informações aos Investidores</p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-3">
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="central-resultados.html">Central de Resultados</a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="documentos-cvm.html">Documentos entregues à CVM</a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="fatos-relevantes.html"
+                          >Fatos Relevantes e Comunicados</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="apresentacoes-teleconferencias.html"
+                          >Apresentações e Teleconferências</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page submenu-parent">
+                        <a class="dropdown-item" href="https://saomartinho.astri.solutions/relatos-integrados" target="_blank">
+                          Relatório de Sustentabilidade
+                        </a>
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="cobertura-analista.html"
+                          >Cobertura de Analista</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="recompra-acoes.html"
+                          >Recompra de Ações</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="planilha-resultados.html"
+                          >Planilha de Resultados</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="rating.html"
+                          >Rating</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="projecoes-safra.html"
+                          >Projeções de Safra</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="outros-documentos.html"
+                          >Outros Documentos</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="menu-items">
+                  <div class="dropdown">
+                    <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu-4"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                    >
+                      <p>Outras Informações</p>
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-4">
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="informe-rendimentos.html"
+                          >Informe de Rendimentos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="calendario-eventos.html"
+                          >Calendário de Eventos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a
+                          class="dropdown-item"
+                          href="cotacoes-graficos.html"
+                          >Cotações e Gráficos</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="perguntas-frequentes.html"
+                          >Perguntas mais Frequentes</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page submenu-parent">
+                        <a class="dropdown-item" href="alertas-ri.html"
+                          >Alertas RI</a
+                        >
+                      </li>
+
+                      <li class="dropdown-page">
+                        <a class="dropdown-item" href="fale-conosco.html"
+                          >Fale com RI</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+              <div class="header-actions">
+                <div class="search-bar">
+                  <a href="#">
+                    <img src="./images/icon_search.svg" alt="Search" />
+                  </a>
+                </div>
+
+                <button
+                  class="mobile-menu-toggle"
+                  id="mobileMenuToggle"
+                  aria-label="Menu"
+                >
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+
+    <div id="searchBox">
+      <div class="container container-full">
+        <div class="wrapper">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control inputBusca"
+              placeholder="Digite aqui a sua busca"
+            />
+
+            <div class="input-group-append">
+              <button
+                type="button"
+                class="input-group-text close-search-box"
+                role="button"
+              >
+                <img
+                  src="./images/icon-close.svg"
+                  alt="Close"
+                  title="Fechar Caixa de Pesquisa"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="search-help">
+            <small> Aperte Enter para pesquisar </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-internal">
+      <div class="container container-full">
+        <div class="container-title-image">
+          <div class="title-page">
+            <h1>Perguntas mais Frequentes</h1>
+
+            <div class="breadcrumb">
+              <a href="#" target="_blank">Home</a>
+              <a href="#" target="_blank">Outras Informações</a>
+              <a href="#" target="_blank">Perguntas mais Frequentes</a>
+            </div>
+          </div>
+
+          <div class="image-header-internal">
+            <img src="images/header-quem-somos-2.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-atas-assembleias p-80">
+      <div class="container container-full">
+        <div class="conteudo-atas-assembleias">
+          <div class="accordions-main atas-assembleias-accordion">
+            <div class="accordion" id="perguntasFrequentes">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOndeSaoNegociadas">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOndeSaoNegociadas" aria-expanded="false" aria-controls="collapseOndeSaoNegociadas">
+                    <span class="accordion-title">Onde são negociadas as ações da São Martinho?</span>
+                  </button>
+                </h3>
+                <div id="collapseOndeSaoNegociadas" class="accordion-collapse collapse" aria-labelledby="headingOndeSaoNegociadas" data-bs-parent="#perguntasFrequentes">
+                  <div class="accordion-body">
+                    <p>As ações da São Martinho estão registradas para negociação na B3 sob o código "SMTO3", admitidas à negociação no Novo Mercado, nível mais elevado de práticas diferenciadas de governança corporativa.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingQuaisDireitos">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuaisDireitos" aria-expanded="false" aria-controls="collapseQuaisDireitos">
+                    <span class="accordion-title">Quais os direitos das ações ordinárias da São Martinho?</span>
+                  </button>
+                </h3>
+                <div id="collapseQuaisDireitos" class="accordion-collapse collapse" aria-labelledby="headingQuaisDireitos" data-bs-parent="#perguntasFrequentes">
+                  <div class="accordion-body">
+                    <p>As ações da São Martinho garantem aos seus titulares os seguintes direitos:</p>
+                    <ul>
+                      <li>
+                        Direito de voto nas Assembleias Gerais da Companhia;
+                      </li>
+                      <li>Direito ao dividendo mínimo obrigatório, em cada exercício social, equivalente a 25,0% do Lucro líquido ajustado nos termos do artigo 202 da Lei das Sociedades por Ações;</li>
+                      <li>Em caso de alienação, direta ou indireta, a título oneroso do controle da Companhia, tanto por meio de uma única operação, como por meio de operações sucessivas, direito de alienação de suas ações nas mesmas condições asseguradas aos Acionistas Controladores alienantes (tag along de 100,0% do valor das ações);</li>
+                      <li>Em caso de cancelamento do registro de companhia aberta ou de cancelamento de listagem no Novo Mercado da Bovespa, direito de alienação de suas ações em oferta pública a ser lançada pelos Acionistas Controladores, pelo seu respectivo valor econômico apurado mediante elaboração de laudo de avaliação por empresa especializada e independente, com experiência comprovada e escolhida pela assembleia de Acionistas titulares de ações em circulação a partir de lista tríplice apresentada pelo Conselho de Administração, sendo que os custos de elaboração do referido laudo deverão ser integralmente suportados pelos Acionistas Controladores; e</li>
+                      <li>Todos os demais direitos assegurados às Ações, nos termos previstos no Regulamento do Novo Mercado da Bovespa, no Estatuto Social da São Martinho e na Lei das Sociedades por Ações.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingComoOndeSaoNegociadas">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComoOndeSaoNegociadas" aria-expanded="false" aria-controls="collapseComoOndeSaoNegociadas">
+                    <span class="accordion-title">Como e onde a São Martinho divulga suas informações?</span>
+                  </button>
+                </h3>
+                <div id="collapseComoOndeSaoNegociadas" class="accordion-collapse collapse" aria-labelledby="headingComoOndeSaoNegociadas" data-bs-parent="#perguntasFrequentes">
+                  <div class="accordion-body">
+                    <p>Todos os fatos relevantes, anúncios de resultado e demais comunicados ao mercado da São Martinho são divulgados de maneira simultânea na CVM/B3 e na área de relações com investidores do website da Companhia (<a href="https://www.saomartinho.com.br" target="_blank" rel="noopener">www.saomartinho.com.br</a>), além de posteriormente encaminhados por correio eletrônico às pessoas que se cadastram para receber tais informações.</p>
+                    <p>As demonstrações financeiras completas são publicadas anualmente no Valor Econômico. Demonstrações financeiras trimestrais, press releases, apresentações, fatos relevantes e avisos aos acionistas estão disponíveis na área de relações com investidores do website da São Martinho (<a href="https://www.saomartinho.com.br" target="_blank" rel="noopener">www.saomartinho.com.br</a>). Outras informações sobre a Companhia também podem ser obtidas nos sites da Bolsa de Valores de São Paulo (<a href="https://www.b3.com.br" target="_blank" rel="noopener">www.b3.com.br</a>) e Comissão de Valores Mobiliários (<a href="https://www.cvm.gov.br" target="_blank" rel="noopener">www.cvm.gov.br</a>).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingComoInvestir">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComoInvestir" aria-expanded="false" aria-controls="collapseComoInvestir">
+                    <span class="accordion-title">Como investir em ações?</span>
+                  </button>
+                </h3>
+                <div id="collapseComoInvestir" class="accordion-collapse collapse" aria-labelledby="headingComoInvestir" data-bs-parent="#perguntasFrequentes">
+                  <div class="accordion-body">
+                    <p>Antes de procurar uma Corretora de Valores, sugere-se que você estude o assunto no site da B3. Contribuindo para o aprendizado do iniciante, a Bolsa de Valores de São Paulo elaborou um Curso Básico sobre o Mercado de Ações. São três módulos distintos, que ainda trazem exercícios para você testar seus conhecimentos. Clique no link abaixo e confira:</p>
+                    <p><a href="https://educacional.bmfbovespa.com.br/home" target="_blank" rel="noopener">Cursos Básicos B3</a></p>
+                    <p>Depois disso, o próximo passo é você procurar uma Corretora de Valores. As Corretoras e outros intermediários financeiros dispõem de profissionais voltados à análise de mercado, de setores e de companhias, e com eles você poderá se informar sobre o momento certo de comprar e vender determinadas ações para obter melhores resultados.</p>
+                    <p>Você também pode negociar ações via Internet. Para tanto, é necessário que você seja cliente de uma Corretora da B3 que disponha do sistema Home Broker, o qual permite a negociação de ações via Internet. Confira a lista das Corretoras que oferecem Home Broker.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingComoContatar">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseComoContatar" aria-expanded="false" aria-controls="collapseComoContatar">
+                    <span class="accordion-title">Como posso contatar a Área de Relações com Investidores?</span>
+                  </button>
+                </h3>
+                <div id="collapseComoContatar" class="accordion-collapse collapse" aria-labelledby="headingComoContatar" data-bs-parent="#perguntasFrequentes">
+                  <div class="accordion-body">
+                    <p>E-mail: <a href="mailto:ri@saomartinho.com.br">ri@saomartinho.com.br</a></p>
+                    <p>Tel: (11) 2105-4100</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="first-content-footer">
+        <div class="container container-full">
+          <div class="links-footer">
+            <div class="list-footer">
+              <h5>A Companhia</h5>
+
+              <a href="https://saomartinho.astri.solutions/" target="_blank">Visão Institucional</a>
+              <a href="/por-que-investir.html">Por que investir na São Martinho</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Governança Corporativa</h5>
+
+              <a href="/novo-mercado.html">Novo Mercado</a>
+              <a href="/composicao-acionaria.html">Composição Acionária</a>
+              <a href="/orgaos-comites.html">Órgãos e Comitês</a>
+              <a href="/remuneracao-administracao.html">Remuneração da Administração</a>
+              <a href="/atas-assembleias.html">Atas e Assembleias</a>
+              <a href="/etica-conformidade.html">Ética &amp; Conformidade</a>
+              <a href="/estatuto-politicas-outros.html">Estatuto, Políticas e Outros Documentos</a>
+              <a href="/dividendos-juros.html">Dividendos e Juros sobre Capital Próprio</a>
+              <a href="/boletim-voto-distancia.html">Boletim de Voto a Distância</a>
+              <a href="/estatuto-social.html">Estatuto Social</a>
+              <a href="/informe-governanca.html">Informe de Governança</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Informações aos Investidores</h5>
+
+              <a href="/central-resultados.html">Central de Resultados</a>
+              <a href="/documentos-cvm.html">Documentos entregues à CVM</a>
+              <a href="/fatos-relevantes.html">Fatos Relevantes e Comunicados</a>
+              <a href="/apresentacoes-teleconferencias.html">Apresentações e Teleconferências</a>
+              <a href="https://saomartinho.astri.solutions/relatos-integrados">Relatório de Sustentabilidade</a>
+              <a href="/cobertura-analista.html">Cobertura de Analista</a>
+              <a href="/recompra-acoes.html">Recompra de Ações</a>
+              <a href="/planilha-resultados.html">Planilha de Resultados</a>
+              <a href="/rating.html">Rating</a>
+              <a href="/projecoes-safra.html">Projeções de Safra</a>
+              <a href="/outros-documentos.html">Outros Documentos</a>
+            </div>
+
+            <div class="list-footer">
+              <h5>Outras Informações</h5>
+
+              <a href="/informe-rendimentos.html">Informe de Rendimentos</a>
+              <a href="/calendario-eventos.html">Calendário de Eventos</a>
+              <a href="/cotacoes-graficos.html">Cotações e Gráficos</a>
+              <a href="/perguntas-frequentes.html">Perguntas mais Frequentes</a>
+              <a href="/alertas-ri.html">Alertas RI</a>
+              <a href="/fale-conosco.html">Fale com RI</a>
+            </div>
+
+          </div>
+
+          <div class="logo-footer">
+            <div class="logo">
+              <a href="/" target="_blank">
+                <img src="images/logo-footer.svg" alt="" />
+              </a>
+            </div>
+
+            <div class="social-footer">
+              <p>São Martinho nas redes:</p>
+
+              <div class="social-links">
+                <a href="#" target="_blank">
+                  <img src="images/icon-linkedin.svg" alt="" />
+                </a>
+
+                <a href="#" target="_blank">
+                  <img src="images/icon-instagram.svg" alt="" />
+                </a>
+
+                <a href="#" target="_blank">
+                  <img src="images/icon-facebook.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="termos-politica">
+              <a href="#" target="_blank">Termos e Condições</a>
+              <a href="#" target="_blank">Política de Privacidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="powered-footer">
+        <div class="container container-full">
+          <div class="content-powered">
+            <p>São Martinho © Todos os direitos reservados 2025</p>
+
+            <a href="#" target="_blank">
+              <img src="images/astri-logo.svg" alt="" />
+            </a>
+
+            <a href="#" class="back-to-top">
+              Voltar ao topo
+
+              <img src="images/arrow-top.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/timeline.js"></script>
+  </body>
+</html>
