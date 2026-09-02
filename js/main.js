@@ -586,7 +586,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperConfig = {
     slidesPerView: 1,
     spaceBetween: 0,
-    loop: false,
+    loop: true,
     autoplay: {
       delay: AUTOPLAY_DELAY,
       disableOnInteraction: false,
