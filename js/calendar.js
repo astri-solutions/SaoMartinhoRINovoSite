@@ -127,7 +127,7 @@
     initialView: 'dayGridMonth',
     headerToolbar: false,
     firstDay: 0,
-    fixedWeekCount: true,
+    fixedWeekCount: false,
     showNonCurrentDates: true,
     height: 'auto',
     dayMaxEvents: false,
@@ -196,17 +196,10 @@
      ============================================================ */
  
   var ICONE_GOOGLE =
-    '<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">' +
-    '<rect x="2.5" y="5" width="19" height="14" rx="2" fill="#fff" stroke="#ea4335" stroke-width="2"/>' +
-    '<path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '</svg>';
+    "<img src='../images/icon-gmail.png' alt='Google Calendar' width='16' height='16' />";
  
   var ICONE_OUTLOOK =
-    '<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">' +
-    '<rect x="3" y="4.5" width="18" height="15" rx="2" fill="#fff" stroke="#0f6cbd" stroke-width="2"/>' +
-    '<path d="M3 9h18" stroke="#0f6cbd" stroke-width="2"/>' +
-    '<rect x="6" y="11.5" width="5" height="5" rx="1" fill="#0f6cbd"/>' +
-    '</svg>';
+    "<img src='../images/icon-outlook.png' alt='Outlook Calendar' width='16' height='16' />";
  
   function criarBotao(href, rotulo, icone) {
     var a = document.createElement('a');
