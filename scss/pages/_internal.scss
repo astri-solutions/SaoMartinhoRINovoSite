@@ -637,6 +637,13 @@
   }
 }
 
+.title-subtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
 .p-112 {
   padding: 112px 0px;
 
@@ -2393,7 +2400,7 @@
 }
 
 .nav-contact {
-  display: flex;
+  display: none;
   align-items: center;
   position: relative;
   z-index: 1004;
