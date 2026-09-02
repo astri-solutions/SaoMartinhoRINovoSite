@@ -1087,3 +1087,22 @@ if (investTabsEl) {
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const iconsHome = document.querySelectorAll(".icon-contato");
+  const darkMode = document.body.classList.contains("dark-mode");
+
+  iconsHome.forEach((icon) => {
+    const img = icon.querySelector("img");
+    if (!img) return;
+
+    const src = img.getAttribute("src");
+    const darkSrc = img.dataset.darkSrc;
+
+    if (darkMode && darkSrc) {
+      img.setAttribute("src", darkSrc);
+    } else {
+      img.setAttribute("src", src);
+    }
+  });
+});

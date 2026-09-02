@@ -401,13 +401,13 @@
     .accordion-item {
       border: 1px solid #d7d7d7;
       border-radius: 8px;
-      background: #fff;
       margin-bottom: 16px;
       box-shadow: 0 1px 3px rgba(20, 20, 20, 0.12);
 
       &:has(.accordion-button:not(.collapsed)) {
         border-color: #d7d7d7;
         box-shadow: 0 1px 3px rgba(20, 20, 20, 0.12);
+        background: var(--color-primary);
       }
 
       .accordion-header {
@@ -417,7 +417,6 @@
           min-height: 64px;
           padding: 18px 24px !important;
           border-radius: 7px !important;
-          background: #fff !important;
           color: var(--color-primary);
           gap: 24px;
 
@@ -441,7 +440,7 @@
           }
 
           &:not(.collapsed) {
-            background: var(--color-primary) !important;
+            background: var(--color-primary);
             color: #fff;
 
             .accordion-title,
@@ -753,6 +752,19 @@
 .safra-section-header {
   background: #f2f2f2;
   color: var(--color-text-secondary);
+}
+
+.contact-info {
+  .info-item {
+    background-color: #f5f5f5;
+    padding: 32px;
+    border-radius: 8px;
+  }
+
+    h3 {
+      color: var(--color-text-primary);
+      margin-bottom: 1rem;
+    }
 }
 
 .p-112 {
@@ -8931,6 +8943,7 @@ a.send {
         &:has(.accordion-button:not(.collapsed)) {
           border-color: #d7d7d7;
           box-shadow: 0 1px 3px rgba(20, 20, 20, 0.12);
+          background: var(--color-primary);
         }
 
         .accordion-header {
@@ -8940,7 +8953,7 @@ a.send {
             min-height: 64px;
             padding: 18px 24px !important;
             border-radius: 7px !important;
-            background: #fff !important;
+            background: #fff;
             color: var(--color-primary);
             gap: 24px;
 
@@ -8964,7 +8977,7 @@ a.send {
             }
 
             &:not(.collapsed) {
-              background: var(--color-primary) !important;
+              background: var(--color-primary);
               color: #fff;
 
               .accordion-title,

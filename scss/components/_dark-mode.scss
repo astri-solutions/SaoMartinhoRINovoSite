@@ -38,6 +38,96 @@ body.dark-mode {
     color: #fff;
   }
 
+  .header.menu-internal {
+    background: #2b2b2b !important;
+  }
+
+  .text-central-resultados-home {
+    h2 {
+    color: #fff !important;
+    }
+
+    .home-results {
+      &__quarter {
+        color: #fff !important;
+      }
+
+    }
+
+    .text-central-resultados-home__more {
+      color: #fff !important;
+    }
+
+    .btn {
+      background-color: #fff !important;
+      color: #000 !important;
+    }
+  }
+
+  .home-news-list {
+    &__title {
+      color: #fff !important;
+    }
+
+    &__date {
+      color: #fff !important;
+    }
+
+    .home-news-list__more {
+      color: #fff !important;
+    }
+  }
+
+  .home-quicklinks {
+    background-color: #1a1a1a !important;
+
+    &__item {
+      background-color: #2b2b2b !important;
+
+      &:hover {
+        background-color: #6e6e6e !important;
+      }
+    }
+  }
+
+  .home-media {
+    background-color: #1a1a1a !important;
+
+    .home-events-list {
+      &__title {
+        color: #fff !important;
+      }
+    }
+
+    &__more {
+      color: #fff !important;
+    }
+  }
+
+  .home-contact-strip {
+    background-color: #1a1a1a !important;
+
+    &__fale-icon {
+      svg{
+        stroke: #fff !important;
+      }
+    }
+
+    &__info {
+      span {
+        a {
+          color: #dcdcdc !important;
+        }
+      }
+    }
+
+    &__alertas{
+      svg {
+        stroke: #fff !important;
+      }
+    }
+  }
+
   h3 {
     color: #fff;
   }
@@ -217,6 +307,12 @@ body.dark-mode {
     background-color: #1a1a1a !important;
   }
 
+  table tfoot tr td {
+    background-color: #1a1a1a !important;
+    border-color: #fff !important;
+    color: #fff !important;
+  }
+
   .table-striped tbody tr:nth-of-type(odd) {
     background-color: #1a1a1a !important;
   }
@@ -237,6 +333,91 @@ body.dark-mode {
     box-shadow: unset !important;
   }
 
+  .filter .filter-select select {
+    background: #2b2b2b;
+    color: #fff;
+    option{
+      color: #fff;
+    }
+  }
+
+  .content-atas-assembleias
+    .conteudo-atas-assembleias
+    .accordions-main.atas-assembleias-accordion
+    .accordion-item{
+      background: #1a1a1a !important;
+  } 
+
+  .content-atas-assembleias
+    .conteudo-atas-assembleias
+    .accordions-main.atas-assembleias-accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button:has(.accordion-button:not(.collapsed)) {
+      background: #1a1a1a;
+  } 
+
+  .content-atas-assembleias 
+  .conteudo-atas-assembleias 
+  .accordions-main.atas-assembleias-accordion 
+  .accordion-item .accordion-header 
+  .accordion-button::after {
+    color: #fff;
+  }
+
+  .content-atas-assembleias 
+  .conteudo-atas-assembleias 
+  .accordions-main.atas-assembleias-accordion 
+  .accordion-item 
+  .accordion-collapse 
+  .accordion-body {
+    background: #2b2b2b;
+  }
+
+  .content-atas-assembleias 
+  .conteudo-atas-assembleias 
+  .accordions-main.atas-assembleias-accordion 
+  .ata-download-item {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item:has(.accordion-button:not(.collapsed)) {
+      background: #1a1a1a;
+  } 
+
+  .accordions-main
+    .accordion
+    .accordion-item {
+      background: #1a1a1a;
+  } 
+
+  .accordions-main
+    .accordion
+    .accordion-item:has(.accordion-button:not(.collapsed)) {
+      background: #1a1a1a;
+  } 
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button
+    .accordion-title {
+    color: #fff !important;
+  }
+
+  .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button
+    .accordion-role {
+    color: #fff !important;
+  }
+
   .accordions-main
     .accordion
     .accordion-item
@@ -254,12 +435,20 @@ body.dark-mode {
     color: #000;
   }
 
+    .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-header
+    .accordion-button::after {
+    color: #fff;
+  }
+
   .accordions-main
     .accordion
     .accordion-item
     .accordion-header
     .accordion-button:hover::after {
-    color: #000;
+    color: #fff;
   }
 
   .accordions-main .accordion .accordion-item:hover {
@@ -270,6 +459,14 @@ body.dark-mode {
     .accordion
     .accordion-item:has(.accordion-button:not(.collapsed)) {
     border-color: #2b2b2b;
+  }
+
+    .accordions-main
+    .accordion
+    .accordion-item
+    .accordion-collapse
+    .accordion-body {
+    background: #2b2b2b;
   }
 
   .accordions-main
@@ -330,7 +527,18 @@ body.dark-mode {
     .accordion-item
     .accordion-header
     .accordion-button:not(.collapsed)::after {
-    color: #000;
+    color: #fff;
+  }
+
+  .links-doc {
+    a {
+      background-color: #2b2b2b;
+      color: #fff;
+    }
+  }
+
+  .content-text-intern a {
+    color: #fff;
   }
 
   .container-glossario
