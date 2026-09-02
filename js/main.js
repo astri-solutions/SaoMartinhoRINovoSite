@@ -586,7 +586,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperConfig = {
     slidesPerView: 1,
     spaceBetween: 0,
-    loop: true,
+    loop: false,
     autoplay: {
       delay: AUTOPLAY_DELAY,
       disableOnInteraction: false,
@@ -651,9 +651,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const bannerSwiper = new Swiper(bannerSwiperEl, swiperConfig);
 
-  uiElements.nextBtn?.addEventListener("click", () => bannerSwiper.slideNext());
+  uiElements.nextBtn?.addEventListener("click", () => {
+    if (bannerSwiper.isEnd) {
+      bannerSwiper.slideTo(0);
+    } else {
+      bannerSwiper.slideNext();
+    }
+  });
 
-  uiElements.prevBtn?.addEventListener("click", () => bannerSwiper.slidePrev());
+  uiElements.prevBtn?.addEventListener("click", () => {
+    if (bannerSwiper.isBeginning) {
+      bannerSwiper.slideTo(bannerSwiper.slides.length - 1);
+    } else {
+      bannerSwiper.slidePrev();
+    }
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
