@@ -1,409 +1,380 @@
-(function () {
-  'use strict';
- 
-  /* ============================================================
-     1. Dados — categorias e eventos
-     ============================================================ */
- 
-  var CATEGORIAS = {
-    resultados:   { rotulo: 'Divulgação de Resultados', cor: '#22a05b' },
-    conferencias: { rotulo: 'Conferências',             cor: '#1d4ed8' },
-    assembleia:   { rotulo: 'Assembléia Geral',         cor: '#ea580c' },
-    outros:       { rotulo: 'Outros',                   cor: '#6b7280' }
-  };
- 
-  // duracao em minutos. inicio no horário de Brasília.
-  var EVENTOS = [
-    { titulo: 'Divulgação de Resultados 3T25', categoria: 'resultados',   inicio: '2025-11-11T22:00', duracao: 60 },
-    { titulo: 'Conference Call do 3T25',       categoria: 'conferencias', inicio: '2025-11-12T10:00', duracao: 60 },
- 
-    { titulo: 'Divulgação de Resultados 4T25', categoria: 'resultados',   inicio: '2026-02-25T22:00', duracao: 60 },
-    { titulo: 'Conference Call do 4T25',       categoria: 'conferencias', inicio: '2026-02-26T10:00', duracao: 60 },
-    { titulo: 'Assembleia Geral Ordinária',    categoria: 'assembleia',   inicio: '2026-04-28T11:00', duracao: 120 },
-    { titulo: 'Divulgação de Resultados 1T26', categoria: 'resultados',   inicio: '2026-05-12T22:00', duracao: 60 },
-    { titulo: 'Conference Call do 1T26',       categoria: 'conferencias', inicio: '2026-05-13T10:00', duracao: 60 },
-    { titulo: 'Formulário de Referência 2026',   categoria: 'outros',       inicio: '2026-05-29T18:00', duracao: 60 },
-    { titulo: 'Divulgação de Resultados 2T26', categoria: 'resultados',   inicio: '2026-08-11T22:00', duracao: 60 },
-    { titulo: 'Conference Call do 2T26',       categoria: 'conferencias', inicio: '2026-08-12T10:00', duracao: 60 },
-    { titulo: 'Reunião Pública Anual',         categoria: 'outros',       inicio: '2026-09-16T14:00', duracao: 90 },
-    { titulo: 'Divulgação de Resultados 3T26', categoria: 'resultados',   inicio: '2026-11-10T22:00', duracao: 60 },
-    { titulo: 'Conference Call do 3T26',       categoria: 'conferencias', inicio: '2026-11-11T10:00', duracao: 60 },
- 
-    { titulo: 'Divulgação de Resultados 4T26', categoria: 'resultados',   inicio: '2027-02-24T22:00', duracao: 60 },
-    { titulo: 'Conference Call do 4T26',       categoria: 'conferencias', inicio: '2027-02-25T10:00', duracao: 60 }
-  ];
- 
-  var MESES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
-               'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-  var MESES_CURTOS = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
-  var DIAS_SEMANA = ['DOM','SEG','TER','QUA','QUI','SEX','SÁB'];
- 
-  /* ============================================================
-     2. Utilitários
-     ============================================================ */
- 
-  function paraData(iso) {
-    var p = iso.split(/[-T:]/);
-    return new Date(+p[0], +p[1] - 1, +p[2], +p[3], +p[4]);
-  }
- 
-  function somaMinutos(data, minutos) {
-    return new Date(data.getTime() + minutos * 60000);
-  }
- 
-  function dois(n) { return n < 10 ? '0' + n : '' + n; }
- 
-  function horaLocal(data) {
-    return dois(data.getHours()) + ':' + dois(data.getMinutes());
-  }
- 
-  // 20261110T220000 (usado com ctz na URL do Google)
-  function carimboGoogle(data) {
-    return data.getFullYear() + dois(data.getMonth() + 1) + dois(data.getDate()) +
-           'T' + dois(data.getHours()) + dois(data.getMinutes()) + '00';
-  }
- 
-  // 2026-11-10T22:00:00-03:00
-  function carimboOutlook(data) {
-    return data.getFullYear() + '-' + dois(data.getMonth() + 1) + '-' + dois(data.getDate()) +
-           'T' + dois(data.getHours()) + ':' + dois(data.getMinutes()) + ':00-03:00';
-  }
- 
-  function linkGoogle(evento) {
-    var inicio = paraData(evento.inicio);
-    var fim = somaMinutos(inicio, evento.duracao);
-    return 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
-           '&text=' + encodeURIComponent(evento.titulo) +
-           '&dates=' + carimboGoogle(inicio) + '/' + carimboGoogle(fim) +
-           '&ctz=America/Sao_Paulo' +
-           '&details=' + encodeURIComponent(CATEGORIAS[evento.categoria].rotulo);
-  }
- 
-  function linkOutlook(evento) {
-    var inicio = paraData(evento.inicio);
-    var fim = somaMinutos(inicio, evento.duracao);
-    return 'https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent' +
-           '&subject=' + encodeURIComponent(evento.titulo) +
-           '&startdt=' + encodeURIComponent(carimboOutlook(inicio)) +
-           '&enddt=' + encodeURIComponent(carimboOutlook(fim)) +
-           '&body=' + encodeURIComponent(CATEGORIAS[evento.categoria].rotulo);
-    }
- 
-  /* ============================================================
-     3. Legenda
-     ============================================================ */
- 
-  var legenda = document.getElementById('legenda');
-  Object.keys(CATEGORIAS).forEach(function (chave) {
-    var li = document.createElement('li');
-    var ponto = document.createElement('span');
-    ponto.className = 'ponto';
-    ponto.style.setProperty('--cor', CATEGORIAS[chave].cor);
-    li.appendChild(ponto);
-    li.appendChild(document.createTextNode(CATEGORIAS[chave].rotulo));
-    legenda.appendChild(li);
-  });
- 
-  /* ============================================================
-     4. Calendário (FullCalendar)
-     ============================================================ */
- 
-  var eventosFC = EVENTOS.map(function (evento, indice) {
-    var inicio = paraData(evento.inicio);
-    return {
-      id: String(indice),
-      title: evento.titulo,
-      start: inicio,
-      end: somaMinutos(inicio, evento.duracao),
-      extendedProps: { categoria: evento.categoria, indice: indice }
-    };
-  });
- 
-  var elCalendario = document.getElementById('calendario');
-  var titulo = document.getElementById('tituloCalendario');
-  var selectAno = document.getElementById('selectAno');
- 
-  var calendario = new FullCalendar.Calendar(elCalendario, {
-    initialView: 'dayGridMonth',
-    headerToolbar: false,
-    firstDay: 0,
-    fixedWeekCount: false,
-    showNonCurrentDates: true,
-    height: 'auto',
-    dayMaxEvents: false,
-    events: eventosFC,
- 
-    dayHeaderContent: function (info) {
-      return DIAS_SEMANA[info.date.getDay()];
-    },
- 
-    dayCellContent: function (info) {
-      return String(info.date.getDate());
-    },
- 
-    eventContent: function (info) {
-      var categoria = CATEGORIAS[info.event.extendedProps.categoria] || CATEGORIAS.outros;
- 
-      var ponto = document.createElement('span');
-      ponto.className = 'ponto ponto--evento';
-      ponto.style.setProperty('--cor', categoria.cor);
-      ponto.tabIndex = 0;
-      ponto.dataset.titulo = info.event.title;
-      ponto.dataset.hora = horaLocal(info.event.start) + ' \u2022 Hor\u00e1rio de Bras\u00edlia';
-      ponto.setAttribute('aria-label', info.event.title + ', ' + ponto.dataset.hora);
- 
-      return { domNodes: [ponto] };
-    },
- 
-    datesSet: function () { atualizarTopo(); }
-  });
- 
-  function atualizarTopo() {
-    var data = calendario.getDate();
-    titulo.textContent = MESES[data.getMonth()] + ' ' + data.getFullYear();
-    if (selectAno.value !== String(data.getFullYear())) {
-      selectAno.value = String(data.getFullYear());
-    }
-  }
- 
-  /* ============================================================
-     5. Seletor de ano
-     ============================================================ */
- 
-  var anos = EVENTOS.map(function (e) { return +e.inicio.slice(0, 4); });
-  var anoAtual = new Date().getFullYear();
-  anos.push(anoAtual);
-  anos = anos.filter(function (ano, i, lista) { return lista.indexOf(ano) === i; })
-             .sort(function (a, b) { return b - a; });
- 
-  anos.forEach(function (ano) {
-    var opcao = document.createElement('option');
-    opcao.value = String(ano);
-    opcao.textContent = String(ano);
-    selectAno.appendChild(opcao);
-  });
- 
-  selectAno.addEventListener('change', function () {
-    var data = calendario.getDate();
-    calendario.gotoDate(new Date(+selectAno.value, data.getMonth(), 1));
-  });
- 
-  document.getElementById('btnAnterior').addEventListener('click', function () { calendario.prev(); });
-  document.getElementById('btnProximo').addEventListener('click', function () { calendario.next(); });
- 
-  /* ============================================================
-     6. Próximos eventos
-     ============================================================ */
- 
-  var ICONE_GOOGLE =
-    "<img src='../images/icon-gmail.png' alt='Google Calendar' width='16' height='16' />";
- 
-  var ICONE_OUTLOOK =
-    "<img src='../images/icon-outlook.png' alt='Outlook Calendar' width='16' height='16' />";
- 
-  function criarBotao(href, rotulo, icone) {
-    var a = document.createElement('a');
-    a.className = 'botao-agenda';
-    a.href = href;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.setAttribute('aria-label', rotulo);
-    a.title = rotulo;
-    a.innerHTML = icone;
-    return a;
-  }
- 
-  function renderizarProximos() {
-    var lista = document.getElementById('listaProximos');
-    var agora = new Date();
- 
-    var proximos = EVENTOS
-      .map(function (evento) { return { dados: evento, data: paraData(evento.inicio) }; })
-      .filter(function (item) { return item.data >= agora; })
-      .sort(function (a, b) { return a.data - b.data; })
-      .slice(0, 4);
- 
-    lista.innerHTML = '';
- 
-    if (!proximos.length) {
-      var vazio = document.createElement('li');
-      vazio.className = 'proximos__vazio';
-      vazio.textContent = 'Nenhum evento agendado no momento. Consulte o calendário para as datas já divulgadas.';
-      lista.appendChild(vazio);
-      return;
-    }
- 
-    proximos.forEach(function (item) {
-      var li = document.createElement('li');
- 
-      var caixa = document.createElement('div');
-      caixa.className = 'item';
- 
-      var data = document.createElement('div');
-      data.className = 'item__data';
-      data.innerHTML =
-        '<span class="item__dia">' + dois(item.data.getDate()) + '</span>' +
-        '<span class="item__mes">' + MESES_CURTOS[item.data.getMonth()] + '</span>';
- 
-      var conteudo = document.createElement('div');
-      conteudo.className = 'item__conteudo';
- 
-      var tituloEvento = document.createElement('p');
-      tituloEvento.className = 'item__titulo';
-      tituloEvento.textContent = item.dados.titulo;
- 
-      var hora = document.createElement('p');
-      hora.className = 'item__hora';
-      hora.innerHTML =
-        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">' +
-        '<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>' +
-        '<span>' + horaLocal(item.data) + ' • Horário de Brasília</span>';
- 
-      conteudo.appendChild(tituloEvento);
-      conteudo.appendChild(hora);
- 
-      var acoes = document.createElement('div');
-      acoes.className = 'item__acoes';
-      acoes.appendChild(criarBotao(linkGoogle(item.dados), 'Adicionar ao Google Agenda', ICONE_GOOGLE));
-      acoes.appendChild(criarBotao(linkOutlook(item.dados), 'Adicionar ao Outlook', ICONE_OUTLOOK));
- 
-      caixa.appendChild(data);
-      caixa.appendChild(conteudo);
-      caixa.appendChild(acoes);
-      li.appendChild(caixa);
-      lista.appendChild(li);
-    });
-  }
- 
-  /* ============================================================
-     7. Tooltip dos eventos no calendário
-     ============================================================ */
- 
-  var dica = document.createElement('div');
-  dica.className = 'dica';
-  dica.setAttribute('role', 'tooltip');
-  dica.innerHTML = '<span class="dica__titulo"></span><span class="dica__hora"></span>';
-  document.body.appendChild(dica);
- 
-  var dicaTitulo = dica.querySelector('.dica__titulo');
-  var dicaHora = dica.querySelector('.dica__hora');
- 
-  function mostrarDica(alvo) {
-    dicaTitulo.textContent = alvo.dataset.titulo || '';
-    dicaHora.textContent = alvo.dataset.hora || '';
-    dica.setAttribute('data-visivel', 'true');
- 
-    var caixa = alvo.getBoundingClientRect();
-    var medida = dica.getBoundingClientRect();
-    var margem = 8;
- 
-    var esquerda = caixa.left + caixa.width / 2 - medida.width / 2;
-    esquerda = Math.max(margem, Math.min(esquerda, window.innerWidth - medida.width - margem));
- 
-    var topo = caixa.top - medida.height - margem;
-    if (topo < margem) { topo = caixa.bottom + margem; }
- 
-    dica.style.left = esquerda + 'px';
-    dica.style.top = topo + 'px';
-  }
- 
-  function esconderDica() {
-    dica.removeAttribute('data-visivel');
-  }
- 
-  function alvoEvento(elemento) {
-    return elemento && elemento.closest ? elemento.closest('.ponto--evento') : null;
-  }
- 
-  elCalendario.addEventListener('mouseover', function (e) {
-    var alvo = alvoEvento(e.target);
-    if (alvo) { mostrarDica(alvo); }
-  });
- 
-  elCalendario.addEventListener('mouseout', function (e) {
-    if (alvoEvento(e.target)) { esconderDica(); }
-  });
- 
-  elCalendario.addEventListener('focusin', function (e) {
-    var alvo = alvoEvento(e.target);
-    if (alvo) { mostrarDica(alvo); }
-  });
- 
-  elCalendario.addEventListener('focusout', esconderDica);
- 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { esconderDica(); }
-  });
- 
-  window.addEventListener('scroll', esconderDica, true);
-  window.addEventListener('resize', esconderDica);
- 
- 
-  /* ============================================================
-     8. Eventos realizados
-     ============================================================ */
- 
-  var selectAnoRealizados = document.getElementById('selectAnoRealizados');
-  var listaRealizados = document.getElementById('listaRealizados');
- 
-  function dataCurta(data) {
-    return dois(data.getDate()) + '/' + dois(data.getMonth() + 1) + '/' + data.getFullYear();
-  }
- 
-  anos.forEach(function (ano) {
-    var opcao = document.createElement('option');
-    opcao.value = String(ano);
-    opcao.textContent = String(ano);
-    selectAnoRealizados.appendChild(opcao);
-  });
-  selectAnoRealizados.value = String(anoAtual);
- 
-  function renderizarRealizados() {
-    var agora = new Date();
-    var ano = +selectAnoRealizados.value;
- 
-    var realizados = EVENTOS
-      .map(function (evento) { return { dados: evento, data: paraData(evento.inicio) }; })
-      .filter(function (item) { return item.data < agora && item.data.getFullYear() === ano; })
-      .sort(function (a, b) { return b.data - a.data; });
- 
-    listaRealizados.innerHTML = '';
- 
-    if (!realizados.length) {
-      var vazio = document.createElement('li');
-      vazio.className = 'realizados__vazio';
-      vazio.textContent = 'Nenhum evento realizado em ' + ano + '.';
-      listaRealizados.appendChild(vazio);
-      return;
-    }
- 
-    realizados.forEach(function (item) {
-      var li = document.createElement('li');
-      li.className = 'realizado';
- 
-      var data = document.createElement('time');
-      data.className = 'realizado__data';
-      data.dateTime = item.dados.inicio;
-      data.textContent = dataCurta(item.data);
- 
-      var titulo = document.createElement('p');
-      titulo.className = 'realizado__titulo';
-      titulo.textContent = item.dados.titulo;
- 
-      li.appendChild(data);
-      li.appendChild(titulo);
-      listaRealizados.appendChild(li);
-    });
-  }
- 
-  selectAnoRealizados.addEventListener('change', renderizarRealizados);
- 
-  /* ============================================================
-     9. Inicialização
-     ============================================================ */
- 
-  calendario.render();
-  atualizarTopo();
-  renderizarProximos();
-  renderizarRealizados();
-})();
+     /* =====================================================================
+         CALENDÁRIO DE EVENTOS — implementação manual (sem biblioteca)
+ 
+         Fonte única de dados: array EVENTOS.
+         Alimenta, ao mesmo tempo:
+           1. a grade do calendário (pontos coloridos + tooltip);
+           2. os cards de "Próximos eventos" (com links de agenda);
+           3. a lista de "Eventos realizados" (filtrada pelo select de ano).
+ 
+         Para integrar ao CMS, basta trocar o array EVENTOS por um JSON
+         vindo do backend e chamar iniciar() depois de carregá-lo.
+         ===================================================================== */
+      (function () {
+        'use strict';
+ 
+        /* ---------- 1. Dados ------------------------------------------- */
+ 
+        // As chaves devem bater com os modificadores .cal-dot--* da legenda.
+        var CATEGORIAS = {
+          conferencias: 'Conferências',
+          divulgacao:   'Divulgação',
+          assembleias:  'Assembléias',
+          investorday:  'Investor Day',
+          outros:       'Outros'
+        };
+ 
+        // data: 'AAAA-MM-DD' | hora: 'HH:MM' | duracao: minutos
+        var EVENTOS = [
+          { titulo: 'Investor Day 2026',                    categoria: 'investorday',  data: '2026-01-15', hora: '09:00', duracao: 480 },
+          { titulo: 'Divulgação de resultados do 4T25',     categoria: 'divulgacao',   data: '2026-02-24', hora: '18:00', duracao: 60 },
+          { titulo: 'Conference Call do 4T25',              categoria: 'conferencias', data: '2026-02-25', hora: '10:00', duracao: 60 },
+          { titulo: 'Divulgação de resultados do 1T26',     categoria: 'divulgacao',   data: '2026-04-05', hora: '18:00', duracao: 60 },
+          { titulo: 'Conference Call do 1T26',              categoria: 'conferencias', data: '2026-04-06', hora: '10:00', duracao: 60 },
+          { titulo: 'Assembleia Geral Ordinária (AGO)',     categoria: 'assembleias',  data: '2026-04-16', hora: '11:00', duracao: 120 },
+          { titulo: 'Formulário de Referência 2026',        categoria: 'outros',       data: '2026-05-29', hora: '18:00', duracao: 60 },
+          { titulo: 'Divulgação de resultados do 2T26',     categoria: 'divulgacao',   data: '2026-08-11', hora: '18:00', duracao: 60 },
+          { titulo: 'Conference Call do 2T26',              categoria: 'conferencias', data: '2026-08-12', hora: '10:00', duracao: 60 },
+          { titulo: 'Reunião Pública Anual',                categoria: 'outros',       data: '2026-09-16', hora: '14:00', duracao: 90 },
+          { titulo: 'Divulgação de resultados do 3T26',     categoria: 'divulgacao',   data: '2026-11-10', hora: '18:00', duracao: 60 },
+          { titulo: 'Conference Call do 3T26',              categoria: 'conferencias', data: '2026-11-11', hora: '10:00', duracao: 60 },
+ 
+          { titulo: 'Divulgação de resultados do 3T25',     categoria: 'divulgacao',   data: '2025-11-11', hora: '18:00', duracao: 60 },
+          { titulo: 'Conference Call do 3T25',              categoria: 'conferencias', data: '2025-11-12', hora: '10:00', duracao: 60 },
+          { titulo: 'Assembleia Geral Extraordinária (AGE)',categoria: 'assembleias',  data: '2025-09-30', hora: '11:00', duracao: 90 }
+        ];
+ 
+        var MESES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
+                     'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+        var MESES_CURTOS = ['Jan','Fev','Mar','Abr','Mai','Jun',
+                            'Jul','Ago','Set','Out','Nov','Dez'];
+ 
+        var QTD_PROXIMOS = 3; // quantos cards mostrar ao lado do calendário
+ 
+        /* ---------- 2. Utilitários -------------------------------------- */
+ 
+        function pad(n) { return n < 10 ? '0' + n : '' + n; }
+ 
+        function escapar(texto) {
+          return String(texto)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+ 
+        // 'AAAA-MM-DD' + 'HH:MM' -> Date no fuso do navegador
+        function paraData(evento) {
+          var d = evento.data.split('-');
+          var h = (evento.hora || '00:00').split(':');
+          return new Date(+d[0], +d[1] - 1, +d[2], +h[0], +h[1]);
+        }
+ 
+        function somaMinutos(data, minutos) {
+          return new Date(data.getTime() + minutos * 60000);
+        }
+ 
+        function horaFormatada(evento) {
+          return evento.hora || '00:00';
+        }
+ 
+        // 20260416T110000 (usado junto de ctz=America/Sao_Paulo)
+        function carimboGoogle(d) {
+          return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()) +
+                 'T' + pad(d.getHours()) + pad(d.getMinutes()) + '00';
+        }
+ 
+        // 2026-04-16T11:00:00-03:00
+        function carimboOutlook(d) {
+          return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
+                 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':00-03:00';
+        }
+ 
+        function linkGoogle(evento) {
+          var inicio = paraData(evento);
+          var fim = somaMinutos(inicio, evento.duracao || 60);
+          return 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+                 '&text=' + encodeURIComponent(evento.titulo) +
+                 '&dates=' + carimboGoogle(inicio) + '/' + carimboGoogle(fim) +
+                 '&ctz=America/Sao_Paulo' +
+                 '&details=' + encodeURIComponent(CATEGORIAS[evento.categoria] || '');
+        }
+ 
+        function linkOutlook(evento) {
+          var inicio = paraData(evento);
+          var fim = somaMinutos(inicio, evento.duracao || 60);
+          return 'https://outlook.live.com/calendar/0/deeplink/compose' +
+                 '?path=/calendar/action/compose&rru=addevent' +
+                 '&subject=' + encodeURIComponent(evento.titulo) +
+                 '&startdt=' + encodeURIComponent(carimboOutlook(inicio)) +
+                 '&enddt=' + encodeURIComponent(carimboOutlook(fim)) +
+                 '&body=' + encodeURIComponent(CATEGORIAS[evento.categoria] || '');
+        }
+ 
+        // { '2026-04-16': [evento, ...] }
+        var PORDATA = (function () {
+          var mapa = {};
+          EVENTOS.forEach(function (evento) {
+            (mapa[evento.data] = mapa[evento.data] || []).push(evento);
+          });
+          Object.keys(mapa).forEach(function (chave) {
+            mapa[chave].sort(function (a, b) { return paraData(a) - paraData(b); });
+          });
+          return mapa;
+        })();
+ 
+        var hoje = new Date();
+        var atual = new Date(hoje.getFullYear(), hoje.getMonth(), 1);
+ 
+        /* ---------- 3. Grade do calendário ------------------------------ */
+ 
+        var elTitulo = document.getElementById('cal-title');
+        var elCorpo  = document.getElementById('cal-tbody');
+        var elGrade  = elCorpo ? elCorpo.closest('.cal-grid') : null;
+ 
+        function montarCelula(num, fora, chave) {
+          var eventos = (!fora && chave && PORDATA[chave]) ? PORDATA[chave] : [];
+ 
+          var ehHoje = !fora
+            && atual.getFullYear() === hoje.getFullYear()
+            && atual.getMonth() === hoje.getMonth()
+            && num === hoje.getDate();
+ 
+          var classes = fora ? 'cal-outside' : (ehHoje ? 'cal-today' : '');
+ 
+          var pontos = eventos.map(function (evento) {
+            var rotulo = evento.titulo + ' — ' + horaFormatada(evento) + ' (Horário de Brasília)';
+            return '<span class="cal-dot cal-dot--' + evento.categoria + ' cal-dot--tip"'
+                 + ' tabindex="0" role="img"'
+                 + ' data-titulo="' + escapar(evento.titulo) + '"'
+                 + ' data-hora="' + escapar(horaFormatada(evento)) + ' - Horário de Brasília"'
+                 + ' aria-label="' + escapar(rotulo) + '"></span>';
+          }).join('');
+ 
+          return '<td' + (classes ? ' class="' + classes + '"' : '') + '>'
+               + '<div class="cal-cell-inner">'
+               + '<span class="cal-day-num">' + num + '</span>'
+               + (pontos ? '<div class="cal-day-dots">' + pontos + '</div>' : '')
+               + '</div></td>';
+        }
+ 
+        function renderizarCalendario() {
+          var ano = atual.getFullYear(), mes = atual.getMonth();
+          var primeiroDiaSemana = new Date(ano, mes, 1).getDay();      // 0 = domingo
+          var diasNoMes         = new Date(ano, mes + 1, 0).getDate();
+          var diasNoMesAnterior = new Date(ano, mes, 0).getDate();
+ 
+          elTitulo.textContent = MESES[mes] + ' / ' + ano;
+ 
+          var html = '', dia = 1, diaSeguinte = 1;
+ 
+          for (var linha = 0; linha < 6; linha++) {
+            var temDiaDoMes = false, tr = '';
+ 
+            for (var coluna = 0; coluna < 7; coluna++) {
+              var indice = linha * 7 + coluna, num, fora = false, chave = '';
+ 
+              if (indice < primeiroDiaSemana) {          // sobra do mês anterior
+                num = diasNoMesAnterior - primeiroDiaSemana + indice + 1;
+                fora = true;
+              } else if (dia > diasNoMes) {              // sobra do mês seguinte
+                num = diaSeguinte++;
+                fora = true;
+              } else {                                   // dia do mês corrente
+                num = dia++;
+                temDiaDoMes = true;
+                chave = ano + '-' + pad(mes + 1) + '-' + pad(num);
+              }
+ 
+              tr += montarCelula(num, fora, chave);
+            }
+ 
+            // interrompe antes de desenhar uma semana só com dias do mês seguinte
+            if (linha > 0 && !temDiaDoMes) { break; }
+            html += '<tr>' + tr + '</tr>';
+          }
+ 
+          elCorpo.innerHTML = html;
+        }
+ 
+        /* ---------- 4. Tooltip dos pontos ------------------------------- */
+ 
+        var dica = document.createElement('div');
+        dica.className = 'cal-tip';
+        dica.setAttribute('role', 'tooltip');
+        dica.innerHTML = '<span class="cal-tip-title"></span><span class="cal-tip-time"></span>';
+        document.body.appendChild(dica);
+ 
+        var dicaTitulo = dica.querySelector('.cal-tip-title');
+        var dicaHora   = dica.querySelector('.cal-tip-time');
+ 
+        function mostrarDica(alvo) {
+          dicaTitulo.textContent = alvo.getAttribute('data-titulo') || '';
+          dicaHora.textContent = alvo.getAttribute('data-hora') || '';
+          dica.setAttribute('data-visivel', 'true');
+ 
+          var caixa = alvo.getBoundingClientRect();
+          var medida = dica.getBoundingClientRect();
+          var margem = 8;
+ 
+          var esquerda = caixa.left + caixa.width / 2 - medida.width / 2;
+          esquerda = Math.max(margem, Math.min(esquerda, window.innerWidth - medida.width - margem));
+ 
+          var topo = caixa.top - medida.height - margem;
+          if (topo < margem) { topo = caixa.bottom + margem; }
+ 
+          dica.style.left = esquerda + 'px';
+          dica.style.top  = topo + 'px';
+        }
+ 
+        function esconderDica() { dica.removeAttribute('data-visivel'); }
+ 
+        function alvoPonto(elemento) {
+          return elemento && elemento.closest ? elemento.closest('.cal-dot--tip') : null;
+        }
+ 
+        if (elGrade) {
+          elGrade.addEventListener('mouseover', function (e) {
+            var alvo = alvoPonto(e.target); if (alvo) { mostrarDica(alvo); }
+          });
+          elGrade.addEventListener('mouseout', function (e) {
+            if (alvoPonto(e.target)) { esconderDica(); }
+          });
+          elGrade.addEventListener('focusin', function (e) {
+            var alvo = alvoPonto(e.target); if (alvo) { mostrarDica(alvo); }
+          });
+          elGrade.addEventListener('focusout', esconderDica);
+        }
+ 
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' || e.key === 'Esc') { esconderDica(); }
+        });
+        window.addEventListener('scroll', esconderDica, true);
+        window.addEventListener('resize', esconderDica);
+ 
+        /* ---------- 5. Próximos eventos --------------------------------- */
+ 
+        var elProximos = document.getElementById('cal-events');
+ 
+        function cardEvento(evento, data) {
+          return ''
+            + '<div class="cal-event-card">'
+            +   '<div>'
+            +     '<span class="cal-event-date">' + pad(data.getDate()) + ' / ' + MESES_CURTOS[data.getMonth()] + '</span>'
+            +     '<h5 class="cal-event-title">' + escapar(evento.titulo) + '</h5>'
+            +     '<span class="cal-event-time">' + horaFormatada(evento) + ' - Horário de Brasília</span>'
+            +   '</div>'
+            +   '<div class="cal-event-actions">'
+            +     '<a href="' + escapar(linkGoogle(evento)) + '" class="cal-event-icon" target="_blank" rel="noopener noreferrer"'
+            +       ' title="Adicionar ao Google Agenda" aria-label="Adicionar ' + escapar(evento.titulo) + ' ao Google Agenda">'
+            +       '<img src="images/icon-gmail.png" alt="Google Agenda" width="16" height="16" />'
+            +     '</a>'
+            +     '<a href="' + escapar(linkOutlook(evento)) + '" class="cal-event-icon" target="_blank" rel="noopener noreferrer"'
+            +       ' title="Adicionar ao Outlook" aria-label="Adicionar ' + escapar(evento.titulo) + ' ao Outlook">'
+            +       '<img src="images/icon-outlook.png" alt="Outlook" width="16" height="16" />'
+            +     '</a>'
+            +   '</div>'
+            + '</div>';
+        }
+ 
+        function renderizarProximos() {
+          if (!elProximos) { return; }
+ 
+          var proximos = EVENTOS
+            .map(function (evento) { return { dados: evento, data: paraData(evento) }; })
+            .filter(function (item) { return item.data >= hoje; })
+            .sort(function (a, b) { return a.data - b.data; })
+            .slice(0, QTD_PROXIMOS);
+ 
+          if (!proximos.length) {
+            elProximos.innerHTML = '<p class="cal-events-empty">Nenhum evento agendado no momento.</p>';
+            return;
+          }
+ 
+          elProximos.innerHTML = proximos.map(function (item) {
+            return cardEvento(item.dados, item.data);
+          }).join('');
+        }
+ 
+        /* ---------- 6. Eventos realizados ------------------------------- */
+ 
+        var elFiltroAno = document.getElementById('filterYear');
+        var elRealizados = document.getElementById('realizados-list');
+ 
+        function anosComHistorico() {
+          var anos = EVENTOS
+            .filter(function (evento) { return paraData(evento) < hoje; })
+            .map(function (evento) { return +evento.data.slice(0, 4); });
+ 
+          anos = anos.filter(function (ano, i, lista) { return lista.indexOf(ano) === i; });
+          return anos.sort(function (a, b) { return b - a; });
+        }
+ 
+        function preencherFiltroAno() {
+          if (!elFiltroAno) { return; }
+ 
+          var anos = anosComHistorico();
+          if (!anos.length) { anos = [hoje.getFullYear()]; }
+ 
+          elFiltroAno.innerHTML = anos.map(function (ano) {
+            return '<option value="' + ano + '">' + ano + '</option>';
+          }).join('');
+ 
+          elFiltroAno.value = String(
+            anos.indexOf(hoje.getFullYear()) > -1 ? hoje.getFullYear() : anos[0]
+          );
+        }
+ 
+        function renderizarRealizados() {
+          if (!elRealizados) { return; }
+ 
+          var ano = elFiltroAno ? +elFiltroAno.value : hoje.getFullYear();
+ 
+          var realizados = EVENTOS
+            .map(function (evento) { return { dados: evento, data: paraData(evento) }; })
+            .filter(function (item) {
+              return item.data < hoje && item.data.getFullYear() === ano;
+            })
+            .sort(function (a, b) { return b.data - a.data; });
+ 
+          if (!realizados.length) {
+            elRealizados.innerHTML =
+              '<li class="doc-list-item"><div class="d-flex align-items-center">'
+              + '<span>Nenhum evento realizado em ' + ano + '.</span></div></li>';
+            return;
+          }
+ 
+          elRealizados.innerHTML = realizados.map(function (item) {
+            var d = item.data;
+            return ''
+              + '<li class="doc-list-item js-animate-up">'
+              +   '<div class="d-flex align-items-center">'
+              +     '<span class="doc-list-date">' + pad(d.getDate()) + ' / ' + pad(d.getMonth() + 1) + ' / ' + d.getFullYear() + '</span>'
+              +     '<span class="doc-list-sep">&ndash;</span>'
+              +     '<span>' + escapar(item.dados.titulo) + '</span>'
+              +   '</div>'
+              + '</li>';
+          }).join('');
+        }
+ 
+        /* ---------- 7. Navegação e inicialização ------------------------ */
+ 
+        document.getElementById('cal-prev').addEventListener('click', function () {
+          atual = new Date(atual.getFullYear(), atual.getMonth() - 1, 1);
+          esconderDica();
+          renderizarCalendario();
+        });
+ 
+        document.getElementById('cal-next').addEventListener('click', function () {
+          atual = new Date(atual.getFullYear(), atual.getMonth() + 1, 1);
+          esconderDica();
+          renderizarCalendario();
+        });
+ 
+        if (elFiltroAno) {
+          elFiltroAno.addEventListener('change', renderizarRealizados);
+        }
+ 
+        renderizarCalendario();
+        renderizarProximos();
+        preencherFiltroAno();
+        renderizarRealizados();
+      })();
