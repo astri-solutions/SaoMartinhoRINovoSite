@@ -64,6 +64,112 @@
   }
 }
 
+.navigation-att {
+  margin-top: 16px;
+
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ededed;
+  background: var(--surface-light, #fcfcfc);
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+
+  margin: 0 auto;
+
+  max-width: 1215px;
+
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 1659.98px) {
+    max-width: 1257px;
+  }
+
+  @media (max-width: 1360.98px) {
+    max-width: 1108px;
+  }
+
+  @media (max-width: 1200.98px) {
+    max-width: 960px;
+  }
+
+  @media (max-width: 991.98px) {
+    max-width: 720px;
+  }
+
+  @media (max-width: 767.98px) {
+    max-width: 540px;
+  }
+
+  @media (max-width: 575.98px) {
+    max-width: 100%;
+    margin: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: #2e5179;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding: 4px 16px;
+    border-right: 1px solid #ededed;
+    transition: 0.3s all;
+
+    flex: 0 0 auto;
+
+    &:hover {
+      transition: 0.3s all;
+      color: #008520;
+    }
+
+    p {
+      margin: 0;
+      color: #2e5179;
+      font-family: var(--main-font);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      padding: 4px 16px;
+      border-right: 1px solid #ededed;
+      transition: 0.3s all;
+
+      &:hover {
+        transition: 0.3s all;
+        color: #008520;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
 .etica-conformidade-content {
   p {
     font-size: 1rem;
@@ -642,6 +748,11 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 1.25rem;
+}
+
+.safra-section-header {
+  background: #f2f2f2;
+  color: var(--color-text-secondary);
 }
 
 .p-112 {
@@ -2593,110 +2704,7 @@
   padding-right: 12px;
 }
 
-.navigation-att {
-  margin-top: 16px;
 
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid #ededed;
-  background: var(--surface-light, #fcfcfc);
-  position: sticky;
-  top: 20px;
-  z-index: 1000;
-  display: flex;
-  gap: 8px;
-  padding: 16px;
-
-  margin: 0 auto;
-
-  max-width: 1215px;
-
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
-  }
-
-  @media (max-width: 1659.98px) {
-    max-width: 1257px;
-  }
-
-  @media (max-width: 1360.98px) {
-    max-width: 1108px;
-  }
-
-  @media (max-width: 1200.98px) {
-    max-width: 960px;
-  }
-
-  @media (max-width: 991.98px) {
-    max-width: 720px;
-  }
-
-  @media (max-width: 767.98px) {
-    max-width: 540px;
-  }
-
-  @media (max-width: 575.98px) {
-    max-width: 100%;
-    margin: 0;
-    padding-left: 12px;
-    padding-right: 12px;
-    box-sizing: border-box;
-  }
-
-  a {
-    text-decoration: none;
-    color: #2e5179;
-    font-family: var(--main-font);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    padding: 4px 16px;
-    border-right: 1px solid #ededed;
-    transition: 0.3s all;
-
-    flex: 0 0 auto;
-
-    &:hover {
-      transition: 0.3s all;
-      color: #008520;
-    }
-
-    p {
-      margin: 0;
-      color: #2e5179;
-      font-family: var(--main-font);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%;
-      padding: 4px 16px;
-      border-right: 1px solid #ededed;
-      transition: 0.3s all;
-
-      &:hover {
-        transition: 0.3s all;
-        color: #008520;
-      }
-    }
-
-    &:last-child {
-      border-right: none;
-    }
-  }
-}
 
 .content-quem-somos {
   padding-top: 16px;
