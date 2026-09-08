@@ -36,6 +36,20 @@ footer {
           opacity: 0.5;
         }
 
+        p {
+          margin: 0;
+          padding: 0;
+          margin-bottom: 32px;
+
+          color: #fcfcfc;
+          font-family: var(--main-font);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 124%;
+          opacity: 0.5;
+        }
+
         a {
           display: flex;
           text-decoration: none;
