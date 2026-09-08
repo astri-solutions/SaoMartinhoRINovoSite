@@ -482,11 +482,17 @@
           <div class="swiper-slide" data-slide="1">
             <div class="video-background">
               <div class="video-overlay">
-                <img
-                  src="images/banner-01.jpg"
-                  alt="Banner principal"
-                  fetchpriority=high
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="images/banner-01-mobile.jpg"
+                  />
+                  <img
+                    src="images/banner-01.jpg"
+                    alt="Banner principal"
+                    fetchpriority="high"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -504,10 +510,16 @@
           <div class="swiper-slide" data-slide="2">
             <div class="video-background">
               <div class="video-overlay">
-                <img
-                  src="images/banner-02.jpg"
-                  alt="Banner secundário"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="images/banner-02-mobile.jpg"
+                  />
+                  <img
+                    src="images/banner-02.jpg"
+                    alt="Banner secundário"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -521,10 +533,16 @@
           <div class="swiper-slide" data-slide="3">
             <div class="video-background">
               <div class="video-overlay">
-                <img
-                  src="images/banner-03.jpg"
-                  alt="Banner terciário"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="images/banner-03-mobile.jpg"
+                  />
+                  <img
+                    src="images/banner-03.jpg"
+                    alt="Banner terciário"
+                  />
+                </picture>
               </div>
             </div>
 
