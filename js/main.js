@@ -865,10 +865,30 @@ document.addEventListener("DOMContentLoaded", function () {
   //   return;
   // }
 
+  const isPorQueInvestirPage =
+    path.endsWith("/por-que-investir.html") ||
+    path.endsWith("/por-que-investir") ||
+    path === "/por-que-investir.html";
+
   let lastScrollTop = 0;
 
   function handleScroll() {
     const currentScroll = window.scrollY || 0;
+
+    if (isPorQueInvestirPage) {
+      if (currentScroll === 0) {
+        header.classList.remove("hide-header", "show-header");
+        header.classList.add("at-top");
+        header.style.transition = "transform 0.2s ease-in-out, background-color 0.2s ease-in-out, padding 0.2s ease-in-out";
+      } else {
+        header.classList.remove("at-top", "show-header");
+        header.classList.add("hide-header");
+        header.style.transition = "transform 0.2s ease-in-out, background-color 0.2s ease-in-out, padding 0.2s ease-in-out";
+      }
+
+      lastScrollTop = currentScroll;
+      return;
+    }
 
     if (currentScroll === 0) {
       header.classList.remove("hide-header", "show-header");
@@ -888,6 +908,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lastScrollTop = currentScroll;
   }
 
+  handleScroll();
   window.addEventListener("scroll", handleScroll, { passive: true });
 });
 

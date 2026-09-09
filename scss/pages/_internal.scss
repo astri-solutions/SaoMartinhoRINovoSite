@@ -73,7 +73,7 @@
   background: var(--surface-light, #fcfcfc);
   position: sticky;
   top: 20px;
-  z-index: 1000;
+  z-index: 999;
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -109,6 +109,7 @@
 
   @media (max-width: 1200.98px) {
     max-width: 960px;
+    justify-content: start;
   }
 
   @media (max-width: 991.98px) {
@@ -312,7 +313,6 @@
       &:first-child {
         text-align: left;
         width: 40%;
-        font-size: 1rem;
         letter-spacing: 0;
       }
 
@@ -473,6 +473,10 @@
         font-weight: 400;
         line-height: 140%;
         white-space: nowrap;
+
+        @media (max-width: 767px) {
+          white-space: normal;
+        }
       }
 
       .accordion-collapse {
@@ -492,18 +496,37 @@
       }
     }
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 991px) {
       .accordion-item .accordion-header .accordion-button {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
         padding: 16px !important;
-        gap: 12px;
+        gap: 4px 12px;
+      }
+
+      .accordion-item .accordion-header .accordion-button::after {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        align-self: center;
+      }
+
+      .accordion-title,
+      .accordion-role {
+        display: block;
+        width: 100%;
+        margin-left: 0 !important;
       }
 
       .accordion-title {
         font-size: 14px;
+        grid-column: 1;
       }
 
       .accordion-role {
         font-size: 12px;
+        grid-column: 1;
+        white-space: normal;
       }
 
       .accordion-item .accordion-collapse .accordion-body {
@@ -1124,6 +1147,10 @@
         border-radius: var(--lista-container-borde-radius, 12px);
         border: 1px solid var(----colors-support-grey-300, #ebebeb);
         background: var(--list-background-default, #fff);
+
+        @media (max-width: 767px) {
+          gap: 12px;
+        }
       }
 
     }
@@ -1132,6 +1159,10 @@
 .conteudo-central-resultados {
   .filter {
     width: 200px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   .file-icon {
@@ -2268,6 +2299,10 @@
       background-size: 12px;
 
       cursor: pointer;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
 
     /* IE / Edge legado */
@@ -2283,6 +2318,11 @@
       font-style: normal;
       font-weight: 400;
       line-height: 140%;
+    }
+
+
+    @media (max-width: 767px) {
+      width: 100%;
     }
   }
 }
@@ -2517,6 +2557,10 @@ a.send {
     .filter {
       width: 200px;
       margin: 0;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
 
     .accordions-main.atas-assembleias-accordion {
@@ -2554,6 +2598,10 @@ a.send {
 
         a {
           font-weight: 300;
+        }
+
+        @media (max-width: 767px) {
+          gap: 12px;
         }
 
       }

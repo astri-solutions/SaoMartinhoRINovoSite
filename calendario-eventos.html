@@ -37,6 +37,28 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <style>
+      @media (max-width: 575.98px) {
+        .doc-list-item .d-flex {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 6px;
+          width: 100%;
+        }
+
+        .doc-list-sep {
+          display: none;
+        }
+
+        .doc-list-date {
+          display: block !important;
+          width: 100%;
+          text-align: left !important;
+          margin-left: 0 !important;
+        }
+      }
+    </style>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.15/index.global.min.js"></script>
   </head>
@@ -552,7 +574,7 @@
           </div>
           <div class="col-md-2 mt-3 mt-md-0 div-filtro-calendar">
           <div class="filter">
-            <div class="filter-select" data-filter-item="">
+            <div class="filter-calendar" data-filter-item="">
               <select class="form-select" name="ano">
                 <option value="">Ano</option>
                 <option value="2026">2026</option>
@@ -565,7 +587,15 @@
           </div>
         </div>
  
-        <ul class="doc-list mb-5" id="realizados-list"></ul>
+        <ul class="doc-list mb-5">
+          <li class="doc-list-item js-animate-up">
+            <div class="d-flex align-items-center">
+              <span class="doc-list-date">12/08/2026</span>
+              <span class="doc-list-sep">&ndash;</span>
+              <span>Assembleia Geral Ordinária 2026 - São Martinho S.A. (SMTO3) - 1º Convocação</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 

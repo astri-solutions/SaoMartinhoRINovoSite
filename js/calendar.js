@@ -347,7 +347,7 @@
             return ''
               + '<li class="doc-list-item js-animate-up">'
               +   '<div class="d-flex align-items-center">'
-              +     '<span class="doc-list-date">' + pad(d.getDate()) + ' / ' + pad(d.getMonth() + 1) + ' / ' + d.getFullYear() + '</span>'
+              +     '<span class="doc-list-date">' + pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + d.getFullYear() + '</span>'
               +     '<span class="doc-list-sep">&ndash;</span>'
               +     '<span>' + escapar(item.dados.titulo) + '</span>'
               +   '</div>'
