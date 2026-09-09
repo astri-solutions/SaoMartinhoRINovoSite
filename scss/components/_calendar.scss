@@ -133,3 +133,23 @@
       @media (prefers-reduced-motion:reduce){
         .cal-dot--tip,.cal-tip{transition:none;}
       }
+
+      @media (max-width: 575.98px) {
+        .doc-list-item .d-flex {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 6px;
+          width: 100%;
+        }
+
+        .doc-list-sep {
+          display: none;
+        }
+
+        .doc-list-date {
+          display: block !important;
+          width: 100%;
+          text-align: left !important;
+          margin-left: 0 !important;
+        }
+      }
