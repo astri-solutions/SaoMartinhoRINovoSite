@@ -1,60 +1,73 @@
-var swiper = new Swiper(".mySwiper-portfolio-home", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+/**
+ * Inicializa um Swiper apenas se o container existir na página.
+ * Evita que uma página sem o carrossel quebre a execução do arquivo inteiro.
+ */
+function initSwiper(selector, options = {}) {
+  const el = document.querySelector(selector);
+  if (!el) return null;
+
+  return new Swiper(selector, {
+    slidesPerView: "auto",
+    spaceBetween: 8,
+    navigation: {
+      nextEl: `${selector} .swiper-button-next`,
+      prevEl: `${selector} .swiper-button-prev`,
+    },
+    ...options,
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initSwiper(".mySwiper-portfolio-home");
+  initSwiper(".swiper-premios-cards");
+  initSwiper(".swiper-intern");
+  initSwiper(".cards-cert");
+  initSwiper(".cards-ratings");
+  initSwiper(".swiper-residuos");
+  initSwiper(".swiper-ras");
+  initSwiper(".swiper-trainee");
+
+  initSwiper(".swiper-intern-blog", { spaceBetween: 24 });
+
+  initSwiper(".swiper-image-unidades", {
+    navigation: {
+      nextEl: ".swiper-image-unidades .swiper-button-next-2",
+      prevEl: ".swiper-image-unidades .swiper-button-prev-2",
+    },
+  });
+
+  initSwiper(".swiper-qual", {
+    on: {
+      init(swiper) {
+        updateSwiperCounter(swiper);
+      },
+      slideChange(swiper) {
+        updateSwiperCounter(swiper);
+      },
+    },
+  });
+
+  checkSwiperUnidades();
+  window.addEventListener("resize", checkSwiperUnidades);
 });
 
-var swiper = new Swiper(".swiper-premios-cards", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+function updateSwiperCounter(swiper) {
+  const counter = document.querySelector(".swiper-qual .swiper-counter");
+  if (!counter) return;
 
-var swiper = new Swiper(".swiper-intern", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+  const current = swiper.realIndex + 1;
+  const total = swiper.slides.length;
+  counter.textContent = `${current}/${total}`;
+}
 
-var swiper = new Swiper(".cards-cert", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-var swiper = new Swiper(".cards-ratings", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+/* --------------------------------------------------------------
+ * Swiper de unidades: só ativo até 1200px, destruído acima disso.
+ * -------------------------------------------------------------- */
 
 let swiperUnidades = null;
 
 function initSwiperUnidades() {
-  swiperUnidades = new Swiper(".swiper-unidades", {
-    slidesPerView: "auto",
-    spaceBetween: 24,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  swiperUnidades = initSwiper(".swiper-unidades", { spaceBetween: 24 });
 }
 
 function destroySwiperUnidades() {
@@ -65,88 +78,11 @@ function destroySwiperUnidades() {
 }
 
 function checkSwiperUnidades() {
-  const swiperEl = document.querySelector(".swiper-unidades");
-  if (!swiperEl) return;
+  if (!document.querySelector(".swiper-unidades")) return;
 
   if (window.innerWidth <= 1200) {
     if (!swiperUnidades) initSwiperUnidades();
   } else {
     destroySwiperUnidades();
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  checkSwiperUnidades();
-  window.addEventListener("resize", checkSwiperUnidades);
-});
-
-var swiper = new Swiper(".swiper-image-unidades", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next-2",
-    prevEl: ".swiper-button-prev-2",
-  },
-});
-
-var swiper = new Swiper(".swiper-residuos", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-var swiper = new Swiper(".swiper-ras", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-var swiper = new Swiper(".swiper-intern-blog", {
-  slidesPerView: "auto",
-  spaceBetween: 24,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-var swiperQual = new Swiper(".swiper-qual", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-qual .swiper-button-next",
-    prevEl: ".swiper-qual .swiper-button-prev",
-  },
-  on: {
-    init: function () {
-      updateSwiperCounter(this);
-    },
-    slideChange: function () {
-      updateSwiperCounter(this);
-    },
-  },
-});
-
-var swiperQual = new Swiper(".swiper-trainee", {
-  slidesPerView: "auto",
-  spaceBetween: 8,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-function updateSwiperCounter(swiper) {
-  const counter = document.querySelector(".swiper-qual .swiper-counter");
-  if (counter) {
-    const current = swiper.realIndex + 1;
-    const total = swiper.slides.length;
-    counter.textContent = `${current}/${total}`;
   }
 }

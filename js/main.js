@@ -498,6 +498,101 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const mobileQuery = window.matchMedia("(max-width: 1200px)");
+  const languageTools = document.querySelector(".acessibility-bar .language-tools");
+  const currentLang = languageTools?.querySelector(".lang-on");
+  if (!languageTools || !currentLang) return;
+
+  function setLanguageMenu(isOpen) {
+    languageTools.classList.toggle("is-open", isOpen);
+    currentLang.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  function syncLanguageMode() {
+    if (mobileQuery.matches) {
+      currentLang.setAttribute("aria-haspopup", "true");
+      setLanguageMenu(false);
+    } else {
+      languageTools.classList.remove("is-open");
+      currentLang.removeAttribute("aria-haspopup");
+      currentLang.removeAttribute("aria-expanded");
+    }
+  }
+
+  currentLang.addEventListener("click", function (e) {
+    if (!mobileQuery.matches) return;
+    e.preventDefault();
+    setLanguageMenu(!languageTools.classList.contains("is-open"));
+  });
+
+  document.addEventListener("click", function (e) {
+    if (mobileQuery.matches && !languageTools.contains(e.target)) {
+      setLanguageMenu(false);
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && languageTools.classList.contains("is-open")) {
+      setLanguageMenu(false);
+      currentLang.focus();
+    }
+  });
+
+  syncLanguageMode();
+  mobileQuery.addEventListener("change", syncLanguageMode);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tickerEl = document.querySelector(".acessibility-bar .nav-contact");
+  if (!tickerEl || typeof Swiper === "undefined") return;
+  if (tickerEl.querySelectorAll(".item-cotacao").length < 2) return;
+
+  const TICKER_DELAY = 3000;
+  const mobileQuery = window.matchMedia("(max-width: 767px)");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let tickerSwiper = null;
+
+  function initTicker() {
+    if (tickerSwiper) return;
+
+    tickerSwiper = new Swiper(tickerEl, {
+      wrapperClass: "cotacao",
+      slideClass: "item-cotacao",
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      speed: 600,
+      allowTouchMove: true,
+      autoplay: reducedMotion.matches
+        ? false
+        : {
+            delay: TICKER_DELAY,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+      a11y: false,
+    });
+  }
+
+  function destroyTicker() {
+    if (!tickerSwiper) return;
+    tickerSwiper.destroy(true, true);
+    tickerSwiper = null;
+  }
+
+  function syncTicker() {
+    if (mobileQuery.matches) {
+      initTicker();
+    } else {
+      destroyTicker();
+    }
+  }
+
+  syncTicker();
+  mobileQuery.addEventListener("change", syncTicker);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const bannerSwiperEl = document.querySelector(".banner-swiper");
   if (!bannerSwiperEl) return;
 
